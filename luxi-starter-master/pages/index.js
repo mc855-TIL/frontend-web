@@ -69,12 +69,12 @@ function Landing(props) {
               <Feature />
             </Container>
           </section>
-          <section className={classes.spaceTop} id="testimonials">
+          {/* <section className={classes.spaceTop} id="testimonials">
             <Testimonials />
-          </section>
-          <section className={classes.spaceTop} id="pricing">
+          </section> */}
+          {/* <section className={classes.spaceTop} id="pricing">
             <Pricing />
-          </section>
+          </section> */}
           <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="blog">
             <Blog />
           </section>

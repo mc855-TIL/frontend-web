@@ -68,32 +68,6 @@ function MainFeature() {
           </div>
         </Grid>
       </Grid>
-      <Grid container className={classes.root} spacing={6}>
-        <Grid md={12} item>
-          <div className={classes.featureMore}>
-            <div className={clsx(align.textCenter, classes.featureItem, classes.last)}>
-              <ReactWOW animation="fadeInUp" duration="0.6s">
-                <Typography variant="h3" className={classes.title}>
-                  Lorem ipsum dolor
-                </Typography>
-              </ReactWOW>
-              <ReactWOW animation="fadeInUp" delay="0.3s" duration="0.6s">
-                <Typography variant="body1" className={classes.text}>
-                  Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
-                </Typography>
-              </ReactWOW>
-              <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
-                <div className={classes.deco2} />
-              </ReactWOW>
-              <ReactWOW animation="fadeInUp" delay="0.5s" duration="0.6s">
-                <figure className={classes.imgFull}>
-                  <img src={imgAPI.photo[5]} alt="img" />
-                </figure>
-              </ReactWOW>
-            </div>
-          </div>
-        </Grid>
-      </Grid>
     </div>
   );
 }
