@@ -51,10 +51,7 @@ function Landing(props) {
       <CssBaseline />
       <section id="home" />
       <div className={classes.mainWrap}>
-        <Header
-          onToggleDark={onToggleDark}
-          onToggleDir={onToggleDir}
-        />
+        <Header />
         <main className={classes.containerWrap}>
         <section id="subscribe">
             <Subscribe />

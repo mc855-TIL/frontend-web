@@ -43,6 +43,7 @@ function MainFeature() {
             </ReactWOW>
         </Grid>
       </Grid>
+      
       <section className={clsx(classes.spaceBottom, classes.spaceBottom)} id="blog">
         <Blog />
       </section>
