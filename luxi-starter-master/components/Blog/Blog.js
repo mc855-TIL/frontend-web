@@ -15,8 +15,7 @@ function Blog() {
   return (
     <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
-          {cards.map(card => (
-            <Grid item key={card} xs={12} sm={6} md={4}>
+          <Grid item key={"123"} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -25,10 +24,10 @@ function Blog() {
                 />
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Heading
+                  PARA QUEM?
                   </Typography>
                   <Typography>
-                    This is a media card. You can use this section to describe the content.
+                  O serviço é destinado à comunidade acadêmico-científica das instituições de ensino superior do Brasil, credenciadas na Comunidade Acadêmica Federada (CAFe).
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -38,7 +37,50 @@ function Blog() {
                 </CardActions>
               </Card>
             </Grid>
-          ))}
+            <Grid item key={"123"} xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image="https://source.unsplash.com/random"
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                  COMO FUNCIONA?
+                  </Typography>
+                  <Typography>
+                  A plataforma permite trocar, doar ou emprestar materiais e insumos básicos de uma forma muito simples, sendo moderada e gerenciada pelos próprios participantes.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    read More
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item key={"123"} xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image="https://source.unsplash.com/random"
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                  COMO COLABORAR?
+                  </Typography>
+                  <Typography>
+                  O acesso para divulgação e visualização das ofertas é feito a partir de login e senha da CAFe, ou seja, as mesmas credenciais utilizadas na sua instituição
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    read More
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
         </Grid>
     </Container>
   );

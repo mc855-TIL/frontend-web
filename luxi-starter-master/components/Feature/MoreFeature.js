@@ -19,34 +19,7 @@ function MainFeature() {
   const align = useTextAlign();
   return (
     <div className={clsx(classes.featureMore)}>
-      <Grid container spacing={6}>
-        <Grid md={6} item>
-            <ReactWOW animation="fadeInLeft" duration="0.6s">
-              <Typography variant="h3" className={classes.title}>
-                Lorem ipsum dolor
-              </Typography>
-            </ReactWOW>
-            <ReactWOW animation="fadeInLeft" delay="0.3s" duration="0.6s">
-              <Typography variant="body1" className={classes.text}>
-                111Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
-              </Typography>
-            </ReactWOW>
-        </Grid>
-        <Grid md={6} item>
-            <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
-              <div className={classes.deco1} />
-            </ReactWOW>
-            <ReactWOW animation="fadeInRight" delay="0.5s" duration="0.6s">
-              <figure className={classes.img}>
-                <img src={imgAPI.photo[5]} alt="img" />
-              </figure>
-            </ReactWOW>
-        </Grid>
-      </Grid>
       
-      <section className={clsx(classes.spaceBottom, classes.spaceBottom)} id="blog">
-        <Blog />
-      </section>
       <Grid container spacing={6}>
         <Grid md={6} item>
             <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
@@ -61,16 +34,48 @@ function MainFeature() {
         <Grid md={6} item>
             <ReactWOW animation="fadeInRight" duration="0.6s">
               <Typography variant="h3" className={classes.title}>
-                Lorem ipsum dolor
+              Conheça o Solidariedade
               </Typography>
             </ReactWOW>
             <ReactWOW animation="fadeInRight" delay="0.3s" duration="0.6s">
               <Typography variant="body1" className={classes.text}>
-                Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
+              O Solidariedade à Pesquisa é a plataforma que facilita a comunicação entre alunos e professores das instituições   de   ensino   superior,   com o   objetivo de otimizar  o uso de recursos públicos para o desenvolvimento de pesquisas.
+
+A colaboração entre os participantes é a essência do Solidariedade à Pesquisa, aproximando quem tem com quem precisa de insumos
               </Typography>
             </ReactWOW>
         </Grid>
       </Grid>
+      
+      <section className={clsx(classes.spaceBottom, classes.spaceBottom)} id="blog">
+        <Blog />
+      </section>
+
+      <Grid container spacing={6}>
+        <Grid md={6} item>
+            <ReactWOW animation="fadeInLeft" duration="0.6s">
+              <Typography variant="h3" className={classes.title}>
+              INSUMOS E MATERIAIS
+              </Typography>
+            </ReactWOW>
+            <ReactWOW animation="fadeInLeft" delay="0.3s" duration="0.6s">
+              <Typography variant="body1" className={classes.text}>
+              As ofertas podem variar de acordo com a disponibilidade dos pesquisadores de cada instituição. É possível encontrar livros e reagentes até papel e toner para impressão.
+              </Typography>
+            </ReactWOW>
+        </Grid>
+        <Grid md={6} item>
+            <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
+              <div className={classes.deco1} />
+            </ReactWOW>
+            <ReactWOW animation="fadeInRight" delay="0.5s" duration="0.6s">
+              <figure className={classes.img}>
+                <img src={imgAPI.photo[5]} alt="img" />
+              </figure>
+            </ReactWOW>
+        </Grid>
+      </Grid>
+
     </div>
   );
 }

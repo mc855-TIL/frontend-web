@@ -71,17 +71,7 @@ const featureStyles = makeStyles(theme => ({
     '&$last': {
       marginBottom: 0,
     }
-  },
-  // deco1: {
-  //   ...decoration(theme)
-  // },
-  // deco2: {
-  //   ...decoration(theme),
-  //   width: 450,
-  //   height: 450,
-  //   top: 40,
-  //   left: 'calc(50% - 350px)',
-  // }
+  }
 }));
 
 export default featureStyles;
