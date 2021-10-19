@@ -1,7 +1,7 @@
 module.exports = {
   starter: {
-    name: 'Luxiren Starter',
-    desc: 'Luxiren Starter - React Starter Template',
+    name: 'Solidariedade',
+    desc: 'Troca de insumos',
     prefix: 'luxiren',
     logoText: 'Luxiren Theme',
     projectName: 'Starter Project',

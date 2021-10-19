@@ -76,42 +76,14 @@ function Header(props) {
         <Container fixed>
           <div className={classes.headerContent}>
             <nav className={classes.navMenu}>
-              { isMobile && (
-                <IconButton
-                  onClick={handleOpenDrawer}
-                  className={clsx('hamburger hamburger--spin', classes.mobileMenu, openDrawer && 'is-active')}
-                >
-                  <span className="hamburger-box">
-                    <span className={clsx(classes.bar, 'hamburger-inner')} />
-                  </span>
-                </IconButton>
-              )}
               <div className={classes.logo}>
                 <AnchorLink href="#home">
                   <img src={logo} alt="logo" />
                 </AnchorLink>
               </div>
-              {isDesktop && (
-                <Scrollspy
-                  items={navMenu}
-                  currentClassName="active"
-                >
-                  { menuList.map(item => (
-                    <li key={item.id.toString()}>
-                      <Button component={AnchorLink} href={item.url}>{item.name}</Button>
-                    </li>
-                  )) }
-                  <li>
-                    <Button href="#">Contact</Button>
-                  </li>
-                </Scrollspy>
-              )}
             </nav>
             <nav className={classes.userMenu}>
-              { isDesktop && <Button href="#">Login</Button> }
-              <Button variant="contained" color="primary" href="#">Register</Button>
-              { isDesktop && <span className={classes.vDivider} /> }
-              <Settings toggleDark={onToggleDark} toggleDir={onToggleDir} />
+              <Button variant="contained" color="primary" href="#">Acessar</Button>
             </nav>
           </div>
         </Container>

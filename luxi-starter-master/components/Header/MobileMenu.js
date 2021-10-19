@@ -35,20 +35,6 @@ function MobileMenu(props) {
           ))}
         </List>
         <Divider />
-        <List>
-          {['login', 'register', 'contact'].map((text, index) => (
-            <ListItem
-              component="a"
-              href={`/${text}`}
-              button
-              key={text}
-              index={index.toString()}
-              style={{ animationDuration: (index + navMenu.length) * 0.15 + 's' }}
-            >
-              <ListItemText className={classes.menuList} primary={text} />
-            </ListItem>
-          ))}
-        </List>
       </div>
     </div>
   );
