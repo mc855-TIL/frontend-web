@@ -11,7 +11,6 @@ function Feature() {
     <div className={classes.featureWrap}>
       <Parallax />
       <Container fixed>
-        <MainFeature />
         <MoreFeature />
       </Container>
     </div>

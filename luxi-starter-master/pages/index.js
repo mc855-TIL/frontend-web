@@ -59,22 +59,11 @@ function Landing(props) {
         <section id="subscribe">
             <Subscribe />
           </section>
-          <section>
-            <Container fixed>
-              <AnimateSlider />
-            </Container>
-          </section>
           <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="feature">
             <Container fixed>
               <Feature />
             </Container>
           </section>
-          {/* <section className={classes.spaceTop} id="testimonials">
-            <Testimonials />
-          </section> */}
-          {/* <section className={classes.spaceTop} id="pricing">
-            <Pricing />
-          </section> */}
           <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="blog">
             <Blog />
           </section>
