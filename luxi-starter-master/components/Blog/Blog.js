@@ -19,7 +19,7 @@ function Blog() {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
+                  image="/logo.png"
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
@@ -36,7 +36,7 @@ function Blog() {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
+                  image="/logo.png"
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
@@ -53,7 +53,7 @@ function Blog() {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
+                  image="/logo.png"
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>

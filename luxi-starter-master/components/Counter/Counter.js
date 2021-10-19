@@ -39,7 +39,7 @@ function Counter() {
           </Grid>
           <Grid md={4} item>
             <div className={classes.counterItem}>
-              <IosIonitronOutline />
+            <IosBulbOutline />
             </div>
           </Grid>
         </Grid>
