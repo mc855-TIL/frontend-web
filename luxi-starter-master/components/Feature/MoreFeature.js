@@ -21,7 +21,6 @@ function MainFeature() {
     <div className={clsx(classes.featureMore)}>
       <Grid container spacing={6}>
         <Grid md={6} item>
-          {/* <div className={classes.featureItem}> */}
             <ReactWOW animation="fadeInLeft" duration="0.6s">
               <Typography variant="h3" className={classes.title}>
                 Lorem ipsum dolor
@@ -32,10 +31,8 @@ function MainFeature() {
                 111Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
               </Typography>
             </ReactWOW>
-          {/* </div> */}
         </Grid>
         <Grid md={6} item>
-          {/* <div className={classes.featureItem}> */}
             <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
               <div className={classes.deco1} />
             </ReactWOW>
@@ -44,7 +41,6 @@ function MainFeature() {
                 <img src={imgAPI.photo[5]} alt="img" />
               </figure>
             </ReactWOW>
-          {/* </div> */}
         </Grid>
       </Grid>
       <section className={clsx(classes.spaceBottom, classes.spaceBottom)} id="blog">
@@ -52,7 +48,6 @@ function MainFeature() {
       </section>
       <Grid container spacing={6}>
         <Grid md={6} item>
-          <div className={classes.featureItem}>
             <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
               <div className={classes.deco1} />
             </ReactWOW>
@@ -61,10 +56,8 @@ function MainFeature() {
                 <img src={imgAPI.photo[5]} alt="img" />
               </figure>
             </ReactWOW>
-          </div>
         </Grid>
         <Grid md={6} item>
-          <div className={classes.featureItem}>
             <ReactWOW animation="fadeInRight" duration="0.6s">
               <Typography variant="h3" className={classes.title}>
                 Lorem ipsum dolor
@@ -75,7 +68,6 @@ function MainFeature() {
                 Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
               </Typography>
             </ReactWOW>
-          </div>
         </Grid>
       </Grid>
     </div>

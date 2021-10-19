@@ -38,13 +38,13 @@ function Copyright() {
 
 const footers = [
   {
-    title: 'Company',
-    description: ['Team', 'History', 'Contact us', 'Locations'],
+    title: 'Mapa do Site',
+    description: ['Início', 'Conheça', 'Insuos e materiais', 'Contato'],
     link: ['#team', '#history', '#contact-us', '#locations'],
   },
   {
-    title: 'Legal',
-    description: ['Privacy policy', 'Terms of use'],
+    title: 'Contatos',
+    description: ['0800 722 0216', 'atendimento@rnp.br'],
     link: ['#privacy-policy', '#terms-of-use'],
   },
 ];

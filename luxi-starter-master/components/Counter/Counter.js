@@ -8,6 +8,7 @@ import IosIonitronOutline from 'react-ionicons/lib/IosIonitronOutline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import useStyles from './counter-style';
+import Image from 'next/image'
 
 function Counter() {
   const classes = useStyles();
