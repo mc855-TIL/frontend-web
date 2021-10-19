@@ -6,7 +6,7 @@ import ReactWOW from 'react-wow';
 import useStyles from './feature-style';
 import { useTextAlign } from '~/theme/common';
 import imgAPI from '~/public/images/imgAPI';
-
+import Blog from '../Blog';
 function MainFeature() {
   const classes = useStyles();
   const align = useTextAlign();
@@ -22,7 +22,7 @@ function MainFeature() {
             </ReactWOW>
             <ReactWOW animation="fadeInLeft" delay="0.3s" duration="0.6s">
               <Typography variant="body1" className={classes.text}>
-                Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
+                111Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
               </Typography>
             </ReactWOW>
           </div>
@@ -40,6 +40,9 @@ function MainFeature() {
           </div>
         </Grid>
       </Grid>
+      <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="blog">
+            <Blog />
+          </section>
       <Grid container spacing={6}>
         <Grid md={6} item>
           <div className={classes.featureItem}>

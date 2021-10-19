@@ -14,14 +14,7 @@ function Blog() {
   const classes = useStyles();
   return (
     <Container className={classes.cardGrid} maxWidth="md">
-      <Typography gutterBottom variant="h3" align="center" display="block">
-        Blog and News
-      </Typography>
-      <Typography gutterBottom variant="body1" align="center" display="block">
-        Curabitur egestas consequat lorem, vel fermentum augue porta id.
-      </Typography>
-      {/* End hero unit */}
-      <div className={classes.blogWrap}>
+      
         <Grid container spacing={4}>
           {cards.map(card => (
             <Grid item key={card} xs={12} sm={6} md={4}>
@@ -48,7 +41,7 @@ function Blog() {
             </Grid>
           ))}
         </Grid>
-      </div>
+      
     </Container>
   );
 }

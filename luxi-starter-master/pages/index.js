@@ -60,12 +60,7 @@ function Landing(props) {
             <Subscribe />
           </section>
           <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="feature">
-            <Container fixed>
               <Feature />
-            </Container>
-          </section>
-          <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="blog">
-            <Blog />
           </section>
         </main>
         <Hidden mdDown>
