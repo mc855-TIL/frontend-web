@@ -9,7 +9,7 @@ function Feature() {
   const classes = useStyles();
   return (
     <div className={classes.featureWrap}>
-      <Parallax />
+      {/* <Parallax /> */}
       <Container fixed>
         <MoreFeature />
       </Container>
