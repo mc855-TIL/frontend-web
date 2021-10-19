@@ -6,7 +6,14 @@ import ReactWOW from 'react-wow';
 import useStyles from './feature-style';
 import { useTextAlign } from '~/theme/common';
 import imgAPI from '~/public/images/imgAPI';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Container from '@material-ui/core/Container';
 import Blog from '../Blog';
+
 function MainFeature() {
   const classes = useStyles();
   const align = useTextAlign();
@@ -14,7 +21,7 @@ function MainFeature() {
     <div className={clsx(classes.featureMore)}>
       <Grid container spacing={6}>
         <Grid md={6} item>
-          <div className={classes.featureItem}>
+          {/* <div className={classes.featureItem}> */}
             <ReactWOW animation="fadeInLeft" duration="0.6s">
               <Typography variant="h3" className={classes.title}>
                 Lorem ipsum dolor
@@ -25,10 +32,10 @@ function MainFeature() {
                 111Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus.
               </Typography>
             </ReactWOW>
-          </div>
+          {/* </div> */}
         </Grid>
         <Grid md={6} item>
-          <div className={classes.featureItem}>
+          {/* <div className={classes.featureItem}> */}
             <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
               <div className={classes.deco1} />
             </ReactWOW>
@@ -37,12 +44,12 @@ function MainFeature() {
                 <img src={imgAPI.photo[5]} alt="img" />
               </figure>
             </ReactWOW>
-          </div>
+          {/* </div> */}
         </Grid>
       </Grid>
-      <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="blog">
-            <Blog />
-          </section>
+      <section className={clsx(classes.spaceBottom, classes.spaceBottom)} id="blog">
+        <Blog />
+      </section>
       <Grid container spacing={6}>
         <Grid md={6} item>
           <div className={classes.featureItem}>
