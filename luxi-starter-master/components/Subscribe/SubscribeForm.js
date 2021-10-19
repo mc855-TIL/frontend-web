@@ -72,13 +72,14 @@ export default function Pricing() {
           </Grid>
         </form>
         
-        <Grid align="center" item md={3} xs={12}>
+        <Grid item md={9} xs={12}>
           <Button variant="contained" color="primary" className={classes.button}>
-            Send
-            <Icon className={classes.rightIcon}>send</Icon>
+            Procurar insumos
           </Button>
         </Grid>
+        
         <Typography align="center" variant="h10">Compartilhe um item</Typography>
+          
       </Paper>
       
     </div>

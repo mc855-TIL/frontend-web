@@ -30,11 +30,6 @@ function Blog() {
                   O serviço é destinado à comunidade acadêmico-científica das instituições de ensino superior do Brasil, credenciadas na Comunidade Acadêmica Federada (CAFe).
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    read More
-                  </Button>
-                </CardActions>
               </Card>
             </Grid>
             <Grid item key={"123"} xs={12} sm={6} md={4}>
@@ -52,11 +47,6 @@ function Blog() {
                   A plataforma permite trocar, doar ou emprestar materiais e insumos básicos de uma forma muito simples, sendo moderada e gerenciada pelos próprios participantes.
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    read More
-                  </Button>
-                </CardActions>
               </Card>
             </Grid>
             <Grid item key={"123"} xs={12} sm={6} md={4}>
@@ -74,11 +64,6 @@ function Blog() {
                   O acesso para divulgação e visualização das ofertas é feito a partir de login e senha da CAFe, ou seja, as mesmas credenciais utilizadas na sua instituição
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    read More
-                  </Button>
-                </CardActions>
               </Card>
             </Grid>
         </Grid>
