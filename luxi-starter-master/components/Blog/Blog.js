@@ -8,6 +8,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import useStyles from './blog-style';
+import comoFunciona from '~/public/images/comoFunciona.png';
+import paraQuem from '~/public/images/paraQuem.png';
+import comoColaborar from '~/public/images/comoColaborar.png';
+
 const cards = [1, 2, 3];
 
 function Blog() {
@@ -19,7 +23,7 @@ function Blog() {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="/logo.png"
+                  image={paraQuem}
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
@@ -36,7 +40,7 @@ function Blog() {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="/logo.png"
+                  image={comoFunciona}
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
@@ -53,7 +57,7 @@ function Blog() {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image="/logo.png"
+                  image={comoColaborar}
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
