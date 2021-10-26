@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: sectionMargin(theme.spacing())
   },
   containerWrap: {
-    marginTop: theme.spacing(15)
+    marginTop: theme.spacing(10)
   },
 }));
 
@@ -42,7 +42,7 @@ function Landing(props) {
   const { onToggleDark, onToggleDir } = props;
   return (
     <React.Fragment>
-      <Head>
+      <Head >
         <title>
           { brand.starter.name }
           &nbsp; - Home Page
@@ -53,7 +53,7 @@ function Landing(props) {
       <div className={classes.mainWrap}>
         <Header />
         <main className={classes.containerWrap}>
-        <section id="subscribe">
+          <section id="subscribe">
             <Subscribe />
           </section>
           <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="feature">

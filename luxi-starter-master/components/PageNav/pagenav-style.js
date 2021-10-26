@@ -55,7 +55,7 @@ const pagenav = makeStyles(theme => ({
       '& a': {
         width: 12,
         height: 12,
-        boxShadow: theme.shadows[1],
+        boxShadow: 'none',
         background: fade(theme.palette.common.white, 0.3),
         border: `1px solid ${theme.palette.primary.dark}`,
         display: 'block',

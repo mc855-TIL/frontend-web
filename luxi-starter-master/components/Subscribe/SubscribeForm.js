@@ -24,7 +24,7 @@ export default function Pricing() {
 
         <form className={classes.container} noValidate autoComplete="off">
         
-          <Grid container spacing={3} alignItems="flex-end">
+          <Grid container spacing={0} alignItems="flex-end">
             <Grid item xs={12}>
               <TextField
                 id="standard-email"
@@ -35,7 +35,6 @@ export default function Pricing() {
                 onChange={handleChange('email')}
                 margin="normal"
               />
-              
             </Grid>
           </Grid>
           <Grid container spacing={3} alignItems="flex-end">

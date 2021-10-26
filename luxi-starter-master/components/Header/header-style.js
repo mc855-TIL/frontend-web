@@ -54,7 +54,7 @@ const headerStyles = makeStyles(theme => ({
       }
     },
     '&$fixed': {
-      boxShadow: theme.shadows[2],
+      boxShadow: 'none',
       '& $logo': {
         '& img': {
           height: 32,

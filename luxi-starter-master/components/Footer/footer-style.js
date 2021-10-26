@@ -98,7 +98,7 @@ const footerStyles = makeStyles(theme => ({
       position: 'relative',
     },
     '& fieldset': {
-      boxShadow: '0 1.5px 12px 2px rgba(0, 0, 0, 0.06)',
+      boxShadow: 'none',
       border: `1px solid ${theme.palette.type === 'dark' ? theme.palette.primary.light : theme.palette.primary.main} !important`,
       '& legend': {
         top: 6,

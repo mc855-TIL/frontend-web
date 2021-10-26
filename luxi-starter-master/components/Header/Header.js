@@ -72,6 +72,7 @@ function Header(props) {
           fixed && classes.fixed,
           openDrawer && classes.openDrawer
         )}
+        
       >
         <Container fixed>
           <div className={classes.headerContent}>
