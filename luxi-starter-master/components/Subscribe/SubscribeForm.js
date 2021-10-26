@@ -17,13 +17,15 @@ export default function Pricing() {
   };
 
   return (
-    <div className={classes.subscribeWrap}>
       <Paper className={classes.paper}>
         <Typography align="center" variant="h5">Sua pesquisa não pode parar!</Typography>
-        <Typography align="center" variant="h10">O Solidariedade à Pesquisa é uma plataforma de compartilhamento de insumos, materiais e equipamentos, unindo pesquisadores em todo o Brasil.</Typography>
+
+        <center>O Solidariedade à Pesquisa é uma plataforma de compartilhamento de insumos, materiais e equipamentos, unindo pesquisadores em todo o Brasil.</center>
+
         <form className={classes.container} noValidate autoComplete="off">
+        
           <Grid container spacing={3} alignItems="flex-end">
-            <Grid item md={9} xs={12}>
+            <Grid item xs={12}>
               <TextField
                 id="standard-email"
                 label="O que você procura?"
@@ -33,10 +35,11 @@ export default function Pricing() {
                 onChange={handleChange('email')}
                 margin="normal"
               />
+              
             </Grid>
           </Grid>
           <Grid container spacing={3} alignItems="flex-end">
-            <Grid item md={3} xs={12}>
+            <Grid item md={6} xs={12}>
             <TextField
                 id="standard-email"
                 label="Universidade"
@@ -73,17 +76,16 @@ export default function Pricing() {
         </form>
         
         <pre class="tab"></pre>
-        
+        <center>
         <Grid item md={9} xs={12} class="tab">
           <Button variant="contained" color="primary" className={classes.button}>
             Procurar insumos
           </Button>
         </Grid>
+
         <pre class="tab"></pre>
         <Typography align="center" variant="h10">Compartilhe um item</Typography>
-          
+        </center>
       </Paper>
-      
-    </div>
   );
 }
