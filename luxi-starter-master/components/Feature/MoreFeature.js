@@ -22,7 +22,7 @@ function MainFeature() {
   return (
     <div className={clsx(classes.featureMore)}>
       
-      <Grid container spacing={6}>
+      <Grid container spacing={6} className={classes.background}>
         <Grid md={6} item>
             <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
               <div className={classes.deco1} />
@@ -53,7 +53,7 @@ A colaboração entre os participantes é a essência do Solidariedade à Pesqui
         <Blog />
       </section>
 
-      <Grid container spacing={6}>
+      <Grid container spacing={6} className={classes.background}>
         <Grid md={6} item>
             <ReactWOW animation="fadeInLeft" duration="0.6s">
               <Typography variant="h3" className={classes.title}>

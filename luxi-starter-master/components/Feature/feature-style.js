@@ -31,6 +31,9 @@ const featureStyles = makeStyles(theme => ({
     }
   },
   title: {},
+  background: {
+    background: theme.palette.primary.light
+  },
   text: {},
   img: {},
   imgFull: {},
