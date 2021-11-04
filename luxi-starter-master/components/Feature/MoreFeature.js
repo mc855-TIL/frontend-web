@@ -53,7 +53,7 @@ A colaboração entre os participantes é a essência do Solidariedade à Pesqui
         <Blog />
       </section>
 
-      <Grid container spacing={6} className={classes.background}>
+      <Grid container className={classes.background}>
         <Grid md={6} item>
             <ReactWOW animation="fadeInLeft" duration="0.6s">
               <Typography variant="h3" className={classes.title}>
@@ -66,15 +66,10 @@ A colaboração entre os participantes é a essência do Solidariedade à Pesqui
               </Typography>
             </ReactWOW>
         </Grid>
-        <Grid md={6} item>
-            <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
-              <div className={classes.deco1} />
-            </ReactWOW>
-            <ReactWOW animation="fadeInRight" delay="0.5s" duration="0.6s">
-              <figure className={classes.img}>
-                <img src={insumosMateriais} alt="img" />
-              </figure>
-            </ReactWOW>
+        <Grid md={6} >
+            
+                <img src={insumosMateriais} />
+          
         </Grid>
       </Grid>
 

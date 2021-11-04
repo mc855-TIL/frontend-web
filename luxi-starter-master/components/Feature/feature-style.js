@@ -31,10 +31,11 @@ const featureStyles = makeStyles(theme => ({
     }
   },
   title: {
+    marginTop: theme.spacing(3),
     marginLeft: theme.spacing(3)
   },
   background: {
-    background: theme.palette.primary.light,
+    background: "#fafafa",
   },
   text: {
     marginLeft: theme.spacing(3)
@@ -66,7 +67,7 @@ const featureStyles = makeStyles(theme => ({
       [theme.breakpoints.down('sm')]: {
         maxWidth: '98%',
       },
-      marginTop: theme.spacing(5),
+      marginTop: theme.spacing(0),
       '& img': {
         width: '100%'
       }
@@ -74,7 +75,7 @@ const featureStyles = makeStyles(theme => ({
   },
   featureItem: {
     position: 'relative',
-    marginBottom: theme.spacing(20),
+
     '&$last': {
       marginBottom: 0,
     }
