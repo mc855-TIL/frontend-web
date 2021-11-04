@@ -30,11 +30,15 @@ const featureStyles = makeStyles(theme => ({
       height: 100
     }
   },
-  title: {},
-  background: {
-    background: theme.palette.primary.light
+  title: {
+    marginLeft: theme.spacing(3)
   },
-  text: {},
+  background: {
+    background: theme.palette.primary.light,
+  },
+  text: {
+    marginLeft: theme.spacing(3)
+  },
   img: {},
   imgFull: {},
   last: {},

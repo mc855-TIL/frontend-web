@@ -7,11 +7,10 @@ import useStyles from './feature-style';
 function Feature() {
   const classes = useStyles();
   return (
-    <div className={classes.featureWrap}>
-      <Container fixed>
+    
         <MoreFeature />
-      </Container>
-    </div>
+      
+    
   );
 }
 
