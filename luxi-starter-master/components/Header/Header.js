@@ -15,6 +15,7 @@ import logo from '~/public/images/logo.svg';
 import '~/vendors/hamburger-menu.css';
 import useStyles from './header-style';
 import navMenu from './menu';
+import logoSolidariedade from '~/public/images/logoSolidariedade.png';
 
 let counter = 0;
 function createData(name, url) {
@@ -82,6 +83,9 @@ function Header(props) {
                   <img src={logo} alt="logo" />
                 </AnchorLink>
               </div>
+            </nav>
+            <nav className={classes.userMenu}>
+            <img src={logoSolidariedade} alt="logo" />
             </nav>
             <nav className={classes.userMenu}>
               <Button variant="contained" color="primary" href="#">Acessar</Button>
