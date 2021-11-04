@@ -86,8 +86,6 @@ function Footer(props) {
 
   return (
     <div className={classes.footer}>
-
-    
     <Container fixed>
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
