@@ -2,7 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const counterStyles = makeStyles(theme => ({
   counterWrap: {
-    padding: theme.spacing(8, 0)
+    padding: theme.spacing(8, 0),
+    background: "#ffffff"
   },
   text: {},
   counterItem: {
