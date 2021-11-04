@@ -5,6 +5,7 @@ const footerStyles = makeStyles(theme => ({
     margin: theme.spacing(1, 1.5),
   },
   footer: {
+    background: theme.palette.primary.main,
     position: 'relative',
     marginTop: theme.spacing(8),
     paddingTop: theme.spacing(3),

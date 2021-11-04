@@ -13,6 +13,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Container from '@material-ui/core/Container';
 import Blog from '../Blog';
+import conhecaSolidariedade from '~/public/images/conhecaSolidariedade.png';
+import insumosMateriais from '~/public/images/insumosMateriais.png';
 
 function MainFeature() {
   const classes = useStyles();
@@ -27,7 +29,7 @@ function MainFeature() {
             </ReactWOW>
             <ReactWOW animation="fadeInLeft" delay="0.5s" duration="0.6s">
               <figure className={classes.img}>
-                <img src={imgAPI.photo[5]} alt="img" />
+                <img src={conhecaSolidariedade} alt="img" />
               </figure>
             </ReactWOW>
         </Grid>
@@ -70,7 +72,7 @@ A colaboração entre os participantes é a essência do Solidariedade à Pesqui
             </ReactWOW>
             <ReactWOW animation="fadeInRight" delay="0.5s" duration="0.6s">
               <figure className={classes.img}>
-                <img src={imgAPI.photo[5]} alt="img" />
+                <img src={insumosMateriais} alt="img" />
               </figure>
             </ReactWOW>
         </Grid>
