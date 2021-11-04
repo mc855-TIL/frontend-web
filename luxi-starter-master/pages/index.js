@@ -19,7 +19,7 @@ import PageNav from '../components/PageNav';
 import Notification from '../components/Notification';
 import brand from '../public/text/brand';
 
-const sectionMargin = margin => (margin * 0);
+const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
   mainWrap: {
     position: 'relative',
@@ -30,10 +30,11 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 0
   },
   spaceTop: {
-    paddingTop: 0
+    paddingTop: sectionMargin(theme.spacing()),
+    background: "#ffffff"
   },
   containerWrap: {
-    marginTop: 0
+    marginTop: theme.spacing(10)
   },
 }));
 
