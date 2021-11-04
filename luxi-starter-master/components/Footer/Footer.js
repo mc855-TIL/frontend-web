@@ -100,7 +100,7 @@ function Footer(props) {
                     <ul>
                       {footer.description.map((item, index) => (
                         <li key={item}>
-                          <Link href={footer.link[index]} variant="subtitle1" color="textSecondary">
+                          <Link href={footer.link[index]} variant="subtitle1" className={classes.description}>
                             {item}
                           </Link>
                         </li>

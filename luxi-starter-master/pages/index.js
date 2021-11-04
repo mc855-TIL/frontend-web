@@ -68,9 +68,6 @@ function Landing(props) {
             <Counter />
           </section>
         <Footer toggleDir={onToggleDir} />
-        <Hidden mdDown>
-          <Notification />
-        </Hidden>
       </div>
     </React.Fragment>
   );

@@ -5,7 +5,7 @@ const footerStyles = makeStyles(theme => ({
     margin: theme.spacing(1, 1.5),
   },
   footer: {
-    background: theme.palette.primary.main,
+    background: "#006d75",
     position: 'relative',
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(8),
@@ -32,11 +32,16 @@ const footerStyles = makeStyles(theme => ({
     }
   },
   title: {
-    color: theme.palette.type === 'dark' ? theme.palette.primary.light : theme.palette.primary.dark,
+    color: "#ffffff",
     fontSize: 14,
     textTransform: 'uppercase',
     marginBottom: theme.spacing(3),
     fontWeight: theme.typography.fontWeightBold,
+  },
+  description: {
+    color: "#b5f5ec",
+    fontSize: 14,
+    marginBottom: theme.spacing(3),
   },
   logo: {
     textAlign: 'left',
