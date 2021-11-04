@@ -37,6 +37,9 @@ const featureStyles = makeStyles(theme => ({
   background: {
     background: "#fafafa",
   },
+  backgroundd: {
+    background: "#E6FFFB",
+  },
   text: {
     marginLeft: theme.spacing(3)
   },

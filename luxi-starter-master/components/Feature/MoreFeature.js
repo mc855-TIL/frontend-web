@@ -22,15 +22,13 @@ function MainFeature() {
   return (
     <div className={clsx(classes.featureMore)}>
       
-      <Grid container spacing={6} className={classes.background}>
-        <Grid md={6} item>
+      <Grid container spacing={6} className={classes.backgroundd}>
+        <Grid md={6} >
             <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
               <div className={classes.deco1} />
             </ReactWOW>
             <ReactWOW animation="fadeInLeft" delay="0.5s" duration="0.6s">
-              <figure className={classes.img}>
-                <img src={conhecaSolidariedade} alt="img" />
-              </figure>
+                <img src={conhecaSolidariedade} />
             </ReactWOW>
         </Grid>
         <Grid md={6} item>
@@ -67,9 +65,9 @@ A colaboração entre os participantes é a essência do Solidariedade à Pesqui
             </ReactWOW>
         </Grid>
         <Grid md={6} >
-            
+            <ReactWOW animation="fadeInRight" delay="0.5s" duration="0.6s">
                 <img src={insumosMateriais} />
-          
+            </ReactWOW>
         </Grid>
       </Grid>
 
