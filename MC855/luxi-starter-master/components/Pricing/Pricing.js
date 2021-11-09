@@ -12,25 +12,39 @@ import useStyles from './pricing-style';
 
 const tiers = [
   {
-    title: 'Free',
-    price: '0',
-    description: ['10 users included', 
-                  '2 GB of storage', 
-                  'Help center access', 
-                  'Email support'],
-    buttonText: 'Sign up for free',
+    title: 'Enterprise',
+    price: '30',
+    description: [
+      '50 users included',
+      '30 GB of storage',
+      'Help center access',
+      'Phone & email support',
+    ],
+    buttonText: 'Contact us',
     buttonVariant: 'contained',
   },
   {
-    title: 'Pro',
-    price: '15',
+    title: 'Enterprise',
+    price: '30',
     description: [
-      '20 users included',
-      '10 GB of storage',
+      '50 users included',
+      '30 GB of storage',
       'Help center access',
-      'Priority email support',
+      'Phone & email support',
     ],
-    buttonText: 'Get started',
+    buttonText: 'Contact us',
+    buttonVariant: 'contained',
+  },
+  {
+    title: 'Enterprise',
+    price: '30',
+    description: [
+      '50 users included',
+      '30 GB of storage',
+      'Help center access',
+      'Phone & email support',
+    ],
+    buttonText: 'Contact us',
     buttonVariant: 'contained',
   },
   {
@@ -51,7 +65,7 @@ export default function Pricing() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="md" component="main">
+    <Container maxWidth="10" component="main">
       <Typography gutterBottom variant="h3" align="center" display="block">
         Pricing and Plan
       </Typography>
@@ -62,7 +76,7 @@ export default function Pricing() {
         <Grid container spacing={5} alignItems="flex-end">
           {tiers.map(tier => (
             // Enterprise card is full width at sm breakpoint
-            <Grid item key={tier.title} xs={12} md={4}>
+            <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={3}>
               <Card>
                 <CardHeader
                   title={tier.title}
@@ -74,12 +88,13 @@ export default function Pricing() {
                 />
                 <CardContent>
                   <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h3" color="textPrimary">
-                      $
-                      {tier.price}
+                    <Typography component="h2" variant="h5" color="textPrimary">
+                      oferta
                     </Typography>
-                    <Typography variant="h6" color="textSecondary">
-                      /mo
+                  </div>
+                  <div className={classes.cardPricing}>
+                    <Typography component="h2" variant="h3" color="textPrimary">
+                      {tier.price}
                     </Typography>
                   </div>
                   <ul>
