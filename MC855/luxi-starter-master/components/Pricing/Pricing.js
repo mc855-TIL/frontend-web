@@ -9,52 +9,41 @@ import StarIcon from '@material-ui/icons/StarBorder';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import useStyles from './pricing-style';
-
+import CardMedia from '@material-ui/core/CardMedia';
+import comoColaborar from '~/public/images/comoColaborar.png';
 const tiers = [
   {
     title: 'Enterprise',
-    price: '30',
+    price: 'Nome do insumo',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'UNICAMP',
     ],
     buttonText: 'Contact us',
     buttonVariant: 'contained',
   },
   {
     title: 'Enterprise',
-    price: '30',
+    price: 'Nome do insumo',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'UNICAMP',
     ],
     buttonText: 'Contact us',
     buttonVariant: 'contained',
   },
   {
     title: 'Enterprise',
-    price: '30',
+    price: 'Nome do insumo',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'UNICAMP',
     ],
     buttonText: 'Contact us',
     buttonVariant: 'contained',
   },
   {
     title: 'Enterprise',
-    price: '30',
+    price: 'Nome do insumo',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'UNICAMP',
     ],
     buttonText: 'Contact us',
     buttonVariant: 'contained',
@@ -86,20 +75,25 @@ export default function Pricing() {
                   action={tier.title === 'Pro' ? <StarIcon /> : null}
                   className={classes.cardHeader}
                 />
+                <CardMedia
+                  className={classes.cardMedia}
+                  image={comoColaborar}
+                  title="Image title"
+                />
                 <CardContent>
                   <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h5" color="textPrimary">
+                    <Typography component="h2" variant="h5" align="left" color="textPrimary">
                       oferta
                     </Typography>
                   </div>
                   <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h3" color="textPrimary">
+                    <Typography component="h2" variant="h5" align="left" color="textPrimary">
                       {tier.price}
                     </Typography>
                   </div>
                   <ul>
                     {tier.description.map(line => (
-                      <Typography component="li" variant="subtitle1" align="center" key={line}>
+                      <Typography component="li" variant="subtitle1" align="left" key={line}>
                         {line}
                       </Typography>
                     ))}
