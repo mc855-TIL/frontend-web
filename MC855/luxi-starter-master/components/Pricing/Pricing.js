@@ -14,13 +14,15 @@ const tiers = [
   {
     title: 'Free',
     price: '0',
-    description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
+    description: ['10 users included', 
+                  '2 GB of storage', 
+                  'Help center access', 
+                  'Email support'],
     buttonText: 'Sign up for free',
-    buttonVariant: 'outlined',
+    buttonVariant: 'contained',
   },
   {
     title: 'Pro',
-    subheader: 'Most popular',
     price: '15',
     description: [
       '20 users included',
@@ -41,7 +43,7 @@ const tiers = [
       'Phone & email support',
     ],
     buttonText: 'Contact us',
-    buttonVariant: 'outlined',
+    buttonVariant: 'contained',
   }
 ];
 
@@ -60,7 +62,7 @@ export default function Pricing() {
         <Grid container spacing={5} alignItems="flex-end">
           {tiers.map(tier => (
             // Enterprise card is full width at sm breakpoint
-            <Grid item key={tier.title} xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4}>
+            <Grid item key={tier.title} xs={12} md={4}>
               <Card>
                 <CardHeader
                   title={tier.title}
