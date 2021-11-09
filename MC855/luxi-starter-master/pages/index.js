@@ -60,7 +60,6 @@ function Landing(props) {
           <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="feature">
               <Feature />
           </section>
-            <Pricing />
         </main>
         <Hidden mdDown>
           <PageNav />

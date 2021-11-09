@@ -17,6 +17,10 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '100%', 
     borderRadius: "100%"
   },
+  cardMediaProd: {
+    paddingTop: '100%', 
+    
+  },
   cardContent: {
     flexGrow: 1,
   },
