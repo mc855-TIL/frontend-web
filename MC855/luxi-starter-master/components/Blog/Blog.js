@@ -11,47 +11,7 @@ import useStyles from './blog-style';
 import comoFunciona from '~/public/images/comoFunciona.png';
 import paraQuem from '~/public/images/paraQuem.png';
 import comoColaborar from '~/public/images/comoColaborar.png';
-import CardHeader from '@material-ui/core/CardHeader';
 const cards = [1, 2, 3];
-
-const tiers = [
-  {
-    title: 'Enterprise',
-    price: 'Nome do insumo',
-    description: [
-      'UNICAMP',
-    ],
-    buttonText: 'Contact us',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Enterprise',
-    price: 'Nome do insumo',
-    description: [
-      'UNICAMP',
-    ],
-    buttonText: 'Contact us',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Enterprise',
-    price: 'Nome do insumo',
-    description: [
-      'UNICAMP',
-    ],
-    buttonText: 'Contact us',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Enterprise',
-    price: 'Nome do insumo',
-    description: [
-      'UNICAMP',
-    ],
-    buttonText: 'Contact us',
-    buttonVariant: 'contained',
-  }
-];
 
 function Blog() {
   const classes = useStyles();
@@ -110,61 +70,6 @@ function Blog() {
               </Card>
             </Grid>
         </Grid>
-        <Typography gutterBottom variant="h3" align="center" display="block">
-        Pricing and Plan
-      </Typography>
-      <Typography gutterBottom variant="body1" align="center" display="block">
-        Curabitur egestas consequat lorem, vel fermentum augue porta id.
-      </Typography>
-      <div className={classes.pricingWrap}>
-        <Grid container spacing={5} alignItems="flex-end">
-          {tiers.map(tier => (
-            <Grid item key={tier.title} xs={12} md={3}>
-              <Card>
-                <CardHeader
-                  title={tier.title}
-                  subheader={tier.subheader}
-                  titleTypographyProps={{ align: 'center' }}
-                  subheaderTypographyProps={{ align: 'center' }}
-                  action={tier.title === 'Pro' ? <StarIcon /> : null}
-                  className={classes.cardHeader}
-                />
-                <CardMedia
-                  className={classes.cardMediaProd}
-                  image={comoColaborar}
-                  title="Image title"
-                />
-                <CardContent>
-                  <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h5" align="left" color="textPrimary">
-                      oferta
-                    </Typography>
-                  </div>
-                  <div className={classes.cardPricing}>
-                    <Typography component="h2" variant="h5" align="left" color="textPrimary">
-                      {tier.price}
-                    </Typography>
-                  </div>
-                  <ul>
-                    {tier.description.map(line => (
-                      <Typography component="li" variant="subtitle1" align="left" key={line}>
-                        {line}
-                      </Typography>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant} color="primary">
-                    {tier.buttonText}
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </div>
-
-
     </Container>
     
   );
