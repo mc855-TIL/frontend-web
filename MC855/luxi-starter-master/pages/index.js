@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 import PageNav from '../components/PageNav';
 import Notification from '../components/Notification';
 import brand from '../public/text/brand';
+import Link from 'next/link'
 
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
@@ -69,6 +70,12 @@ function Landing(props) {
           </section>
         <Footer toggleDir={onToggleDir} />
       </div>
+      <h1 className="title">
+        Ver{' '}
+        <Link href="/posts/first-post">
+          <a>Adicionar produto</a>
+        </Link>
+      </h1>
     </React.Fragment>
   );
 }

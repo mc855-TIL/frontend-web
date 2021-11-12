@@ -1,3 +1,14 @@
+import Link from 'next/link'
+
 export default function FirstPost() {
-    return <h1>First Post</h1>
-  }
+  return (
+    <>
+      <h2>
+        <Link href="/">
+          <a>Voltar</a>
+        </Link>
+      </h2>
+      <h1>First Post</h1>
+    </>
+  )
+}
