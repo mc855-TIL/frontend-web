@@ -1,6 +1,5 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import BackupIcon from '@material-ui/icons/Backup';
 import ExploreIcon from '@material-ui/icons/Explore';
 import MusicIcon from '@material-ui/icons/LibraryMusic';
 import Grid from '@material-ui/core/Grid';
@@ -13,7 +12,6 @@ function MainFeature() {
       <Grid container className={classes.root} spacing={6}>
         <Grid md={4} item>
           <div className={classes.featureList}>
-            <BackupIcon className={classes.icon} />
             <Typography variant="h5">
               Lorem ipsum dolor
             </Typography>
