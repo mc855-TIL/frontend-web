@@ -7,10 +7,7 @@ import useStyles from './feature-style';
 function Feature() {
   const classes = useStyles();
   return (
-    
         <MoreFeature />
-      
-    
   );
 }
 

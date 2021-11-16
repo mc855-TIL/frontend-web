@@ -70,7 +70,6 @@ A colaboração entre os participantes é a essência do Solidariedade à Pesqui
             </ReactWOW>
         </Grid>
       </Grid>
-
     </div>
   );
 }
