@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Row from '@material-ui/core/Row';
 import Header from '~/components/Header';
 import AnimateSlider from '~/components/AnimateSlider';
 import Feature from '~/components/Feature';
@@ -18,8 +19,7 @@ import Footer from '~/components/Footer';
 import PageNav from '~/components/PageNav';
 import Notification from '~/components/Notification';
 import brand from '~/public/text/brand';
-import Link from 'next/link'
-
+import Link from 'next/link';
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
   mainWrap: {
@@ -40,17 +40,48 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function FirstPost() {
+    const classes = useStyles();
   return (
     <React.Fragment>
-    <Head>
-        <meta name="theme-color" content="#3c1742" />
+      <Head >  
+        <title>
+          { brand.starter.name }
+          &nbsp; - Home Page
+        </title>
       </Head>
-      <h2>
-        <Link href="/">
-          <a>Voltar</a>
-        </Link>
-      </h2>
-      
+      <CssBaseline />
+      <section id="home" />
+      <div className={classes.mainWrap}>
+        <Header />
+        <main className={classes.containerWrap}>
+          <section id="subscribe">
+            <Subscribe />
+          </section>
+          <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="feature">
+              <Feature />
+          </section>
+        </main>
+        <Hidden mdDown>
+          <PageNav />
+        </Hidden>
+        <section className={classes.pageSection}>
+            <Counter />
+          </section>
+        <Footer />
+      </div>
+      <Container>
+        <Row>
+          <Col sm>
+            <span>One of three columns</span>
+          </Col>
+          <Col sm>
+            <span>One of three columns</span>
+          </Col>
+          <Col sm>
+            <span>One of three columns</span>
+          </Col>
+        </Row>
+      </Container>
     </React.Fragment>
   )
 }
