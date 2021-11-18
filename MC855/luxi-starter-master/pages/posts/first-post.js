@@ -83,30 +83,35 @@ function FirstPost() {
       <Grid container spacing={6} className={classes.backgroundd}>
         <Grid md={6} >
           <div className="container">
-            <TextField
-                  id="standard-email"
-                  label="Nome do item"
-                  className={classes.textField}
-                  fullWidth
-                  value={"values.email"}
-                  onChange={"values.email"}
-                  margin="normal"
-                />
-            <TextField
-                  id="standard-email"
-                  label="Descrição do anúncio"
-                  className={classes.textField}
-                  fullWidth
-                  value={"values.email"}
-                  onChange={"values.email"}
-                  margin="normal"
-                />
+      <Container maxWidth="md">
+        <label>
+        Nome do item
+        </label>
+      <form>
+      <textarea/>
+      </form>
+      </Container>
+
+        <Container maxWidth="md">
+        <label>
+          Descrição do anúncio
+        </label>
+      <form>
+      <textarea>
+        
+      </textarea>
+      </form>
+      </Container>
             <style jsx>{`
               .container {
                 margin: 50px;
               }
               p {
                 color: blue;
+              }
+              textarea {
+                width: 600px;
+                height: 150px;
               }
             `}</style>
           </div>
@@ -139,3 +144,37 @@ onToggleDir: PropTypes.func.isRequired,
 };
 
 export default FirstPost;
+
+
+
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  render() {
+    return (
+      <Container maxWidth="md">
+        <label>
+          Name:
+        </label>
+        
+      <form>
+      <textarea>
+        This is simple textarea
+      </textarea>
+        
+      </form>
+      </Container>
+    );
+  }
+}
+
+
