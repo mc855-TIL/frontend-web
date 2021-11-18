@@ -25,6 +25,8 @@ import ReactWOW from 'react-wow';
 import conhecaSolidariedade from '~/public/images/conhecaSolidariedade.png';
 import insumosMateriais from '~/public/images/insumosMateriais.png';
 import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import TextField from '@material-ui/core/TextField';
 
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
@@ -60,8 +62,56 @@ function FirstPost() {
       <div className={classes.mainWrap}>
         <Header />
         <main className={classes.containerWrap}>
-        <div className={clsx(classes.featureMore)}>
+                <div className={clsx(classes.featureMore)}>
+      <div className="container">
+        <p>Início / Catálogo / Ofertar um item</p>
+        <h1 className="title">
+          <Link href="/">
+            <a>←</a>
+          </Link>
+          {' '}Ofertar um item
+        </h1>
+          <style jsx>{`
+            .container {
+              margin: 50px;
+            }
+            p {
+              color: gray;
+            }
+          `}</style>
+      </div>
       <Grid container spacing={6} className={classes.backgroundd}>
+        <Grid md={6} >
+          <div className="container">
+            <TextField
+                  id="standard-email"
+                  label="Nome do item"
+                  className={classes.textField}
+                  fullWidth
+                  value={"values.email"}
+                  onChange={"values.email"}
+                  margin="normal"
+                />
+            <TextField
+                  id="standard-email"
+                  label="Descrição do anúncio"
+                  className={classes.textField}
+                  fullWidth
+                  value={"values.email"}
+                  onChange={"values.email"}
+                  margin="normal"
+                />
+            <style jsx>{`
+              .container {
+                margin: 50px;
+              }
+              p {
+                color: blue;
+              }
+            `}</style>
+          </div>
+        </Grid>
+
         <Grid md={6} >
             <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
               <div className={classes.deco1} />
@@ -70,45 +120,8 @@ function FirstPost() {
                 <img src={conhecaSolidariedade} />
             </ReactWOW>
         </Grid>
-        <Grid md={6} item>
-            <ReactWOW animation="fadeInRight" duration="0.6s">
-              <Typography variant="h3" className={classes.title}>
-              Conheça o Solidariedade
-              </Typography>
-            </ReactWOW>
-            <ReactWOW animation="fadeInRight" delay="0.3s" duration="0.6s">
-              <Typography variant="body1" className={classes.text}>
-              O Solidariedade à Pesquisa é a plataforma que facilita a comunicação entre alunos e professores das instituições   de   ensino   superior,   com o   objetivo de otimizar  o uso de recursos públicos para o desenvolvimento de pesquisas.
-
-A colaboração entre os participantes é a essência do Solidariedade à Pesquisa, aproximando quem tem com quem precisa de insumos
-              </Typography>
-            </ReactWOW>
-        </Grid>
       </Grid>
-      
-      <section className={clsx(classes.spaceBottom, classes.spaceBottom)} id="blog">
-        <Blog />
-      </section>
 
-      <Grid container className={classes.background}>
-        <Grid md={6} item>
-            <ReactWOW animation="fadeInLeft" duration="0.6s">
-              <Typography variant="h3" className={classes.title}>
-              INSUMOS E MATERIAIS
-              </Typography>
-            </ReactWOW>
-            <ReactWOW animation="fadeInLeft" delay="0.3s" duration="0.6s">
-              <Typography variant="body1" className={classes.text}>
-              As ofertas podem variar de acordo com a disponibilidade dos pesquisadores de cada instituição. É possível encontrar livros e reagentes até papel e toner para impressão.
-              </Typography>
-            </ReactWOW>
-        </Grid>
-        <Grid md={6} >
-            <ReactWOW animation="fadeInRight" delay="0.5s" duration="0.6s">
-                <img src={insumosMateriais} />
-            </ReactWOW>
-        </Grid>
-      </Grid>
     </div>
         </main>
       </div>
