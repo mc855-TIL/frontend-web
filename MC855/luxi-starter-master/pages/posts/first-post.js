@@ -61,8 +61,8 @@ function FirstPost() {
       <section id="Add" />
       <div className={classes.mainWrap}>
         <Header />
-        <main className={classes.containerWrap}>
-                <div className={clsx(classes.featureMore)}>
+        
+                
       <div className="container">
         <p>Início / Catálogo / Ofertar um item</p>
         <h1 className="title">
@@ -97,17 +97,20 @@ function FirstPost() {
           Descrição do anúncio
         </label>
       <form>
-      <textarea>
-        
-      </textarea>
+      <textarea/>
       </form>
+      <p>
+      Atenção: Não adicione seus dados de contato à descrição pública do
+anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
+de usuário aqui.
+      </p>
       </Container>
             <style jsx>{`
               .container {
                 margin: 50px;
               }
               p {
-                color: blue;
+                color: gray;
               }
               textarea {
                 width: 600px;
@@ -118,17 +121,47 @@ function FirstPost() {
         </Grid>
 
         <Grid md={6} >
-            <ReactWOW animation="zoomIn" delay="0.3s" duration="0.6s">
-              <div className={classes.deco1} />
-            </ReactWOW>
-            <ReactWOW animation="fadeInLeft" delay="0.5s" duration="0.6s">
-                <img src={conhecaSolidariedade} />
-            </ReactWOW>
+          <div className="container">
+      <Container maxWidth="md">
+        <label>
+        Nome do item
+        </label>
+      <form>
+      <textarea/>
+      </form>
+      </Container>
+
+        <Container maxWidth="md">
+        <label>
+          Descrição do anúncio
+        </label>
+      <form>
+      <textarea/>
+      </form>
+      <p>
+      Atenção: Não adicione seus dados de contato à descrição pública do
+anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
+de usuário aqui.
+      </p>
+      </Container>
+            <style jsx>{`
+              .container {
+                margin: 50px;
+              }
+              p {
+                color: gray;
+              }
+              textarea {
+                width: 600px;
+                height: 150px;
+              }
+            `}</style>
+          </div>
         </Grid>
       </Grid>
 
-    </div>
-        </main>
+    
+        
       </div>
     </React.Fragment>
   )
