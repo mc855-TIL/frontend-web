@@ -48,12 +48,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function FirstPost() {
-    const classes = useStyles();
+  const classes = useStyles();
   return (
     <React.Fragment>
-      <Head >  
+      <Head >
         <title>
-          { brand.starter.name }
+          {brand.starter.name}
           &nbsp; - Adicionar
         </title>
       </Head>
@@ -61,16 +61,14 @@ function FirstPost() {
       <section id="Add" />
       <div className={classes.mainWrap}>
         <Header />
-        
-                
-      <div className="container">
-        <p>Início / Catálogo / Ofertar um item</p>
-        <h1 className="title">
-          <Link href="/">
-            <a>←</a>
-          </Link>
-          {' '}Ofertar um item
-        </h1>
+        <div className="container">
+          <p>Início / Catálogo / Ofertar um item</p>
+          <h1 className="title">
+            <Link href="/">
+              <a>←</a>
+            </Link>
+            {' '}Ofertar um item
+          </h1>
           <style jsx>{`
             .container {
               margin: 50px;
@@ -79,133 +77,113 @@ function FirstPost() {
               color: gray;
             }
           `}</style>
-      </div>
-      <Grid container spacing={6} className={classes.backgroundd}>
-        <Grid md={6} >
-          <div className="container">
-      <Container maxWidth="md">
-        <label>
-        Nome do item
-        </label>
-      <form>
-      <textarea/>
-      </form>
-      </Container>
-
-        <Container maxWidth="md">
-        <label>
-          Descrição do anúncio
-        </label>
-      <form>
-      <textarea/>
-      </form>
-      <p>
-      Atenção: Não adicione seus dados de contato à descrição pública do
-anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
-de usuário aqui.
-      </p>
-      </Container>
-            <style jsx>{`
-              .container {
-                margin: 50px;
-              }
-              p {
-                color: gray;
-              }
-              textarea {
-                width: 600px;
-                height: 150px;
-              }
-            `}</style>
-          </div>
+        </div>
+        <Grid container spacing={6} className={classes.backgroundd}>
+          <Grid md={6} >
+            <FirstPostLeftGrid />
+          </Grid>
+          <Grid md={6} >
+            <FirstPostRightGrid />
+          </Grid>
         </Grid>
-
-        <Grid md={6} >
-          <div className="container">
-      <Container maxWidth="md">
-        <label>
-        Nome do item
-        </label>
-      <form>
-      <textarea/>
-      </form>
-      </Container>
-
-        <Container maxWidth="md">
-        <label>
-          Descrição do anúncio
-        </label>
-      <form>
-      <textarea/>
-      </form>
-      <p>
-      Atenção: Não adicione seus dados de contato à descrição pública do
-anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
-de usuário aqui.
-      </p>
-      </Container>
-            <style jsx>{`
-              .container {
-                margin: 50px;
-              }
-              p {
-                color: gray;
-              }
-              textarea {
-                width: 600px;
-                height: 150px;
-              }
-            `}</style>
-          </div>
-        </Grid>
-      </Grid>
-
-    
-        
       </div>
     </React.Fragment>
   )
 }
 
 FirstPost.getInitialProps = async () => ({
-    namespacesRequired: ['common'],
-  });
-  
+  namespacesRequired: ['common'],
+});
+
 FirstPost.propTypes = {
-onToggleDark: PropTypes.func.isRequired,
-onToggleDir: PropTypes.func.isRequired,
+  onToggleDark: PropTypes.func.isRequired,
+  onToggleDir: PropTypes.func.isRequired,
 };
 
 export default FirstPost;
 
-
-
-class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {value: ''};
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
+class FirstPostLeftGrid extends React.Component {
   render() {
     return (
-      <Container maxWidth="md">
-        <label>
-          Name:
-        </label>
-        
-      <form>
-      <textarea>
-        This is simple textarea
-      </textarea>
-        
-      </form>
-      </Container>
+      <div className="container">
+        <Container maxWidth="md">
+          <label>
+            Nome do item
+          </label>
+          <form>
+            <textarea />
+          </form>
+        </Container>
+
+        <Container maxWidth="md">
+          <label>
+            Descrição do anúncio
+          </label>
+          <form>
+            <textarea />
+          </form>
+          <p>
+            Atenção: Não adicione seus dados de contato à descrição pública do
+            anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
+            de usuário aqui.
+          </p>
+        </Container>
+        <style jsx>{`
+              .container {
+                margin: 50px;
+              }
+              p {
+                color: gray;
+              }
+              textarea {
+                width: 600px;
+                height: 150px;
+              }
+              `}</style>
+      </div>
+    );
+  }
+}
+
+class FirstPostRightGrid extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <Container maxWidth="md">
+          <label>
+            Nome do item
+          </label>
+          <form>
+            <textarea />
+          </form>
+        </Container>
+
+        <Container maxWidth="md">
+          <label>
+            Descrição do anúncio
+          </label>
+          <form>
+            <textarea />
+          </form>
+          <p>
+            Atenção: Não adicione seus dados de contato à descrição pública do
+            anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
+            de usuário aqui.
+          </p>
+        </Container>
+        <style jsx>{`
+              .container {
+                margin: 50px;
+              }
+              p {
+                color: gray;
+              }
+              textarea {
+                width: 600px;
+                height: 150px;
+              }
+              `}</style>
+      </div>
     );
   }
 }
