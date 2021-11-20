@@ -63,30 +63,13 @@ function FirstPost() {
                 <Header />
                 <main className={classes.containerWrap}>
                     <div className={clsx(classes.featureMore)}>
-                        <div className="container">
-                            <br/>
-                            <p>Início / Catálogo / Ofertar um item</p>
-                            <h1 className="title">
-                                <Link href="/">
-                                    <a>←</a>
-                                </Link>
-                                {' '}Ofertar um item
-                            </h1>
-                            <style jsx>{`
-            .container {
-              margin: 50px;
-            }
-            p {
-              color: gray;
-            }
-          `}</style>
-                        </div>
+                        <FirstPostHeaderDetail />
                         <Grid container spacing={6} className={classes.backgroundd}>
                             <Grid md={6} >
-                                <NameForm/>
+                                <FirstPostLeftGrid/>
                             </Grid>
                             <Grid md={6} >
-                                <NameForm/>
+                                <FirstPostRightGrid/>
                             </Grid>
                         </Grid>
                     </div>
@@ -96,31 +79,49 @@ function FirstPost() {
     )
 }
 
-FirstPost.getInitialProps = async () => ({
-    namespacesRequired: ['common'],
-});
-
-FirstPost.propTypes = {
-    onToggleDark: PropTypes.func.isRequired,
-    onToggleDir: PropTypes.func.isRequired,
-};
-
 export default FirstPost;
 
+class FirstPostLeftGrid extends React.Component {
+    render() {
+        return (
+            <div className="container">
+                                    <Container maxWidth="md">
+                                        <label>
+                                            Nome do item
+                                        </label>
+                                        <form>
+                                            <textarea />
+                                        </form>
+                                    </Container>
 
+                                    <Container maxWidth="md">
+                                        <label>
+                                            Descrição do anúncio
+                                        </label>
+                                        <form>
+                                            <textarea>
 
-class NameForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { value: '' };
-
-        this.handleChange = this.handleChange.bind(this);
+                                            </textarea>
+                                        </form>
+                                    </Container>
+                                    <style jsx>{`
+              .container {
+                margin: 50px;
+              }
+              p {
+                color: blue;
+              }
+              textarea {
+                width: 600px;
+                height: 150px;
+              }
+            `}</style>
+                                </div>
+        );
     }
+}
 
-    handleChange(event) {
-        this.setState({ value: event.target.value });
-    }
-
+class FirstPostRightGrid extends React.Component {
     render() {
         return (
             <div className="container">
@@ -161,3 +162,27 @@ class NameForm extends React.Component {
 }
 
 
+class FirstPostHeaderDetail extends React.Component {
+    render() {
+        return (
+            <div className="container">
+                            <br/>
+                            <p>Início / Catálogo / Ofertar um item</p>
+                            <h1 className="title">
+                                <Link href="/">
+                                    <a>←</a>
+                                </Link>
+                                {' '}Ofertar um item
+                            </h1>
+                            <style jsx>{`
+            .container {
+              margin: 50px;
+            }
+            p {
+              color: gray;
+            }
+          `}</style>
+                        </div>
+        );
+    }
+}
