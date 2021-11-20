@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function FirstPost() {
+function VisualizarAnuncio() {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -64,12 +64,12 @@ function FirstPost() {
         <main className={classes.containerWrap}>
           <div className={clsx(classes.featureMore)}>
             <div className="container">
-              <p>Início / Catálogo / Ofertar um item</p>
+              <p>Início / Catálogo / Detalhes do Anúncio </p>
               <h1 className="title">
                 <Link href="/">
                   <a>←</a>
                 </Link>
-                {' '}Ofertar um item
+                {' '}Detalhes do anúncio
         </h1>
               <style jsx>{`
             .container {
@@ -86,7 +86,7 @@ function FirstPost() {
                   <Container maxWidth="md">
                     <label>
                       Nome do item
-        </label>
+                    </label>
                     <form>
                       <textarea />
                     </form>
@@ -134,16 +134,16 @@ function FirstPost() {
   )
 }
 
-FirstPost.getInitialProps = async () => ({
+VisualizarAnuncio.getInitialProps = async () => ({
   namespacesRequired: ['common'],
 });
 
-FirstPost.propTypes = {
+VisualizarAnuncio.propTypes = {
   onToggleDark: PropTypes.func.isRequired,
   onToggleDir: PropTypes.func.isRequired,
 };
 
-export default FirstPost;
+export default VisualizarAnuncio;
 
 
 
