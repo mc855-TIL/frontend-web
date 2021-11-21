@@ -66,10 +66,10 @@ function FirstPost() {
                         <FirstPostHeaderDetail />
                         <Grid container spacing={6} className={classes.backgroundd}>
                             <Grid md={6} >
-                                <FirstPostLeftGrid/>
+                                <FirstPostLeftGrid />
                             </Grid>
                             <Grid md={6} >
-                                <FirstPostRightGrid/>
+                                <FirstPostRightGrid />
                             </Grid>
                         </Grid>
                     </div>
@@ -85,26 +85,26 @@ class FirstPostLeftGrid extends React.Component {
     render() {
         return (
             <div className="container">
-                                    <Container maxWidth="md">
-                                        <label>
-                                            Nome do item
-                                        </label>
-                                        <form>
-                                            <textarea />
-                                        </form>
-                                    </Container>
+                <Container maxWidth="md">
+                    <label>
+                        Nome do item
+                    </label>
+                    <form>
+                        <textarea />
+                    </form>
+                </Container>
 
-                                    <Container maxWidth="md">
-                                        <label>
-                                            Descrição do anúncio
-                                        </label>
-                                        <form>
-                                            <textarea>
+                <Container maxWidth="md">
+                    <label>
+                        Descrição do anúncio
+                    </label>
+                    <form>
+                        <textarea>
 
-                                            </textarea>
-                                        </form>
-                                    </Container>
-                                    <style jsx>{`
+                        </textarea>
+                    </form>
+                </Container>
+                <style jsx>{`
               .container {
                 margin: 50px;
               }
@@ -116,7 +116,7 @@ class FirstPostLeftGrid extends React.Component {
                 height: 150px;
               }
             `}</style>
-                                </div>
+            </div>
         );
     }
 }
@@ -125,56 +125,120 @@ class FirstPostRightGrid extends React.Component {
     render() {
         return (
             <div className="container">
-                                    <Container maxWidth="md">
-                                        <label>
-                                            Nome do item
-                                        </label>
-                                        <form>
-                                            <textarea />
-                                        </form>
-                                    </Container>
+                <Container maxWidth="md">
+                    <label>
+                        Nome do item
+                    </label>
+                    <form>
+                        <textarea />
+                    </form>
+                </Container>
 
-                                    <Container maxWidth="md">
-                                        <label>
-                                            Descrição do anúncio
-                                        </label>
-                                        <form>
-                                            <textarea>
+                <Container maxWidth="md">
+                <Grid container spacing={3} alignItems="flex-end">
+                    <Grid item md={6} xs={12}>
+                        <TextField
+                            id="standard-email"
+                            label="Universidade"
+                            className={"classes.textField"}
+                            fullWidth
+                            value={"values.email"}
+                            margin="normal"
+                        />
+                    </Grid>
+                    <Grid item md={3} xs={12}>
+                        <TextField
+                            id="standard-email"
+                            label="Área"
+                            className={"classes.textField"}
+                            fullWidth
+                            value={"values.email"}
+                            margin="normal"
+                        />
+                    </Grid>
+                </Grid>
+                </Container>
 
-                                            </textarea>
-                                        </form>
-                                    </Container>
-                                    <style jsx>{`
+                <br/>
+                <Container maxWidth="md">
+                <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                <Grid container spacing={3} alignItems="flex-end">
+                    <Grid item md={5} xs={12}>
+                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                        <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                    </Grid>
+                    <Grid item md={6} xs={12}>
+                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                        <label htmlFor="acceptTerms" className="form-check-label">Livro</label>
+                    </Grid>
+                </Grid>
+                </Container>
+
+                <br/>
+                <Container maxWidth="md">
+                <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                <Grid container spacing={3} alignItems="flex-end">
+                    <Grid item md={3} xs={12}>
+                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                        <label htmlFor="acceptTerms" className="form-check-label">Biológicas</label>
+                    </Grid>
+                    <Grid item md={3} xs={12}>
+                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                        <label htmlFor="acceptTerms" className="form-check-label">Exatas</label>
+                    </Grid>
+                    <Grid item md={3} xs={12}>
+                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                        <label htmlFor="acceptTerms" className="form-check-label">Humanas</label>
+                    </Grid>
+                    <Grid item md={3} xs={12}>
+                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                        <label htmlFor="acceptTerms" className="form-check-label">Tecnológicas</label>
+                    </Grid>
+                </Grid>
+                </Container>
+                
+                <br/>
+                <Container maxWidth="md">
+                <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                <Grid container spacing={3} alignItems="flex-end">
+                    <Grid item md={5} xs={12}>
+                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                        <label htmlFor="acceptTerms" className="form-check-label">Disponível para empréstimo</label>
+                    </Grid>
+                </Grid>
+                <p> Você e o solicitante devem combinar o retorno do item. </p>
+                </Container>
+
+                <style jsx>{`
               .container {
                 margin: 50px;
               }
               p {
-                color: blue;
+                color: gray;
               }
               textarea {
                 width: 600px;
                 height: 150px;
               }
             `}</style>
-                                </div>
+            </div>
         );
     }
 }
-
 
 class FirstPostHeaderDetail extends React.Component {
     render() {
         return (
             <div className="container">
-                            <br/>
-                            <p>Início / Catálogo / Ofertar um item</p>
-                            <h1 className="title">
-                                <Link href="/">
-                                    <a>←</a>
-                                </Link>
-                                {' '}Ofertar um item
-                            </h1>
-                            <style jsx>{`
+                <br />
+                <p>Início / Catálogo / Ofertar um item</p>
+                <h1 className="title">
+                    <Link href="/">
+                        <a>←</a>
+                    </Link>
+                    {' '}Ofertar um item
+                </h1>
+                <style jsx>{`
             .container {
               margin: 50px;
             }
@@ -182,7 +246,7 @@ class FirstPostHeaderDetail extends React.Component {
               color: gray;
             }
           `}</style>
-                        </div>
+            </div>
         );
     }
 }
