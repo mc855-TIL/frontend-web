@@ -127,7 +127,7 @@ class FirstPostRightGrid extends React.Component {
             <div className="container">
                 <Container maxWidth="md">
                     <label>
-                        Nome do item
+                        Imagem
                     </label>
                     <form>
                         <textarea />
@@ -139,20 +139,18 @@ class FirstPostRightGrid extends React.Component {
                     <Grid item md={6} xs={12}>
                         <TextField
                             id="standard-email"
-                            label="Universidade"
+                            label="Quantidade (opcional)"
                             className={"classes.textField"}
                             fullWidth
-                            value={"values.email"}
                             margin="normal"
                         />
                     </Grid>
-                    <Grid item md={3} xs={12}>
+                    <Grid item md={6} xs={12}>
                         <TextField
                             id="standard-email"
-                            label="Área"
+                            label="Data de validade (opcional)"
                             className={"classes.textField"}
                             fullWidth
-                            value={"values.email"}
                             margin="normal"
                         />
                     </Grid>
@@ -161,7 +159,7 @@ class FirstPostRightGrid extends React.Component {
 
                 <br/>
                 <Container maxWidth="md">
-                <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                <label htmlFor="acceptTerms" className="form-check-label">Tipo de item</label>
                 <Grid container spacing={3} alignItems="flex-end">
                     <Grid item md={5} xs={12}>
                         <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
@@ -176,7 +174,7 @@ class FirstPostRightGrid extends React.Component {
 
                 <br/>
                 <Container maxWidth="md">
-                <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                <label htmlFor="acceptTerms" className="form-check-label">Área do cohecimento</label>
                 <Grid container spacing={3} alignItems="flex-end">
                     <Grid item md={3} xs={12}>
                         <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
@@ -199,7 +197,7 @@ class FirstPostRightGrid extends React.Component {
                 
                 <br/>
                 <Container maxWidth="md">
-                <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                <label htmlFor="acceptTerms" className="form-check-label">Condição da oferta</label>
                 <Grid container spacing={3} alignItems="flex-end">
                     <Grid item md={5} xs={12}>
                         <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
@@ -211,13 +209,16 @@ class FirstPostRightGrid extends React.Component {
 
                 <style jsx>{`
               .container {
-                margin: 50px;
+                margin-bottom: 50px;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: 50px;
               }
               p {
                 color: gray;
               }
               textarea {
-                width: 600px;
+                width: 550px;
                 height: 150px;
               }
             `}</style>
