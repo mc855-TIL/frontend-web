@@ -39,6 +39,6 @@ Lucas Silva Lopes do Carmo RA: 202110
 ## Developer UI/UX
 Filipe Cavalheiro Marques RA: 148524
 
- Desenhos diponíveis no [Figma](figma.com/file/0D2tCsuX5576oFREHl7mTc/Troca-de-Insumos:-Solidariedade-Unicamp) )
+ Desenhos diponíveis no [Figma](figma.com/file/0D2tCsuX5576oFREHl7mTc/Troca-de-Insumos:-Solidariedade-Unicamp).
 
 
