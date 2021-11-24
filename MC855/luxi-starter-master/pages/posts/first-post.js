@@ -33,6 +33,7 @@ import Uploady, { useItemProgressListener } from "@rpldy/uploady";
 import UploadButton from "@rpldy/upload-button";
 import { asUploadButton } from "@rpldy/upload-button";
 import TusUploady from "@rpldy/tus-uploady";
+import axios from 'axios'; 
 
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
@@ -52,42 +53,6 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(10)
     },
 }));
-
-const LogProgress = () => {
-    useItemProgressListener((item) => {
-        console.log(`>>>>> (hook) File ${item.file.name} completed: ${item.completed}`);
-    });
-
-    return null;
-}
-
-const UploadAndDisplayImage = () => {
-    const [selectedImage, setSelectedImage] = useState(null);
-  
-    return (
-      <div>
-        <h1>Upload and Display Image usign React Hook's</h1>
-        {selectedImage && (
-          <div>
-          <img alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
-          <br />
-          <button onClick={()=>setSelectedImage(null)}>Remove</button>
-          </div>
-        )}
-        <br />
-       
-        <br /> 
-        <input
-          type="file"
-          name="myImage"
-          onChange={(event) => {
-            console.log(event.target.files[0]);
-            setSelectedImage(event.target.files[0]);
-          }}
-        />
-      </div>
-    );
-  };
   
 function FirstPost() {
     const classes = useStyles();
@@ -106,41 +71,6 @@ function FirstPost() {
                 <main className={classes.containerWrap}>
                     <div className={clsx(classes.featureMore)}>
                         <FirstPostHeaderDetail />
-                        {/* ------- */}
-                        <TusUploady
-                            destination={{ url: "https://my-tus-server/upload" }}
-                            chunkSize={2142880}
-                            sendDataOnCreate>
-                            <UploadButton/>
-                        </TusUploady>
-                        <p> Você e o solicitante devem combinar o retorno do item.1 </p>
-                        <Uploady
-                            destination={{ url: "https://my-server/upload" }}>
-                            <UploadButton/>
-                        </Uploady>
-                        <p> Você e o solicitante devem combinar o retorno do item.1 </p>
-                        <Uploady
-                        destination={{ url: "https://my-server/upload" }}>
-                            <LogProgress/>   
-                            <UploadButton/>
-                        </Uploady>
-                        <p> Você e o solicitante devem combinar o retorno do item.1 </p>
-                        <TusUploady
-                            destination={{ url: "https://my-tus-server/upload" }}
-                            chunkSize={2142880}
-                            sendDataOnCreate>
-                            <UploadButton/>
-                        </TusUploady>
-                        <p> Você e o solicitante devem combinar o retorno do item.1 </p>
-                        <TusUploady
-                            destination={{ url: "https://my-tus-server/upload" }}
-                            chunkSize={2142880}
-                            sendDataOnCreate>
-                            <UploadButton/>
-                        </TusUploady>
-
-                        
-                        {/* ------- */}
                         <Grid container spacing={6} className={classes.backgroundd}>
                             <Grid md={6} >
                                 <FirstPostLeftGrid />
@@ -188,7 +118,7 @@ class FirstPostLeftGrid extends React.Component {
               p {
                 color: blue;
               }
-              textarea {78
+              textarea {
                 width: 600px;
                 height: 150px;
               }
@@ -206,9 +136,7 @@ class FirstPostRightGrid extends React.Component {
                     <label>
                         Imagem
                     </label>
-                    <form>
-                        <textarea />
-                    </form>
+                    <App></App>
                 </Container>
 
                 <Container maxWidth="md">
@@ -327,3 +255,78 @@ class FirstPostHeaderDetail extends React.Component {
         );
     }
 }
+
+class App extends Component { 
+
+    state = { 
+
+    // Initially, no file is selected 
+    selectedFile: null
+    }; 
+    
+    // On file select (from the pop up) 
+    onFileChange = event => { 
+    
+    // Update the state 
+    this.setState({ selectedFile: event.target.files[0] }); 
+    
+    }; 
+    
+    // On file upload (click the upload button) 
+    onFileUpload = () => { 
+    
+    // Create an object of formData 
+    const formData = new FormData(); 
+    
+    // Update the formData object 
+    formData.append( 
+        "myFile", 
+        this.state.selectedFile, 
+        this.state.selectedFile.name 
+    ); 
+    
+    // Details of the uploaded file 
+    console.log(this.state.selectedFile); 
+    
+    // Request made to the backend api 
+    // Send formData object 
+    axios.post("api/uploadfile", formData); 
+    }; 
+    
+    // File content to be displayed after 
+    // file upload is complete 
+    fileData = () => { 
+    
+    if (this.state.selectedFile) { 
+        
+        return ( 
+        <div> 
+            <p>Nome: {this.state.selectedFile.name}</p> 
+            <p>Tipo: {this.state.selectedFile.type}</p> 
+            <p> 
+            Última modificação:{" "} 
+            {this.state.selectedFile.lastModifiedDate.toDateString()} 
+            </p> 
+        </div> 
+        ); 
+    } else { 
+        return ( 
+        <div> 
+            <br /> 
+        </div> 
+        ); 
+    } 
+    }; 
+    
+    render() { 
+    
+    return ( 
+        <div>
+            <div> 
+                <input type="file" onChange={this.onFileChange} /> 
+            </div> 
+        {this.fileData()} 
+        </div> 
+    ); 
+    } 
+} 
