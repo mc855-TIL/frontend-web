@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import clsx from 'clsx';
@@ -27,6 +27,12 @@ import insumosMateriais from '~/public/images/insumosMateriais.png';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
+import {Component} from 'react';
+import ImageUploading from 'react-images-uploading';
+import Uploady, { useItemProgressListener } from "@rpldy/uploady";
+import UploadButton from "@rpldy/upload-button";
+import { asUploadButton } from "@rpldy/upload-button";
+import TusUploady from "@rpldy/tus-uploady";
 
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
@@ -47,6 +53,42 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
+const LogProgress = () => {
+    useItemProgressListener((item) => {
+        console.log(`>>>>> (hook) File ${item.file.name} completed: ${item.completed}`);
+    });
+
+    return null;
+}
+
+const UploadAndDisplayImage = () => {
+    const [selectedImage, setSelectedImage] = useState(null);
+  
+    return (
+      <div>
+        <h1>Upload and Display Image usign React Hook's</h1>
+        {selectedImage && (
+          <div>
+          <img alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+          <br />
+          <button onClick={()=>setSelectedImage(null)}>Remove</button>
+          </div>
+        )}
+        <br />
+       
+        <br /> 
+        <input
+          type="file"
+          name="myImage"
+          onChange={(event) => {
+            console.log(event.target.files[0]);
+            setSelectedImage(event.target.files[0]);
+          }}
+        />
+      </div>
+    );
+  };
+  
 function FirstPost() {
     const classes = useStyles();
     return (
@@ -64,6 +106,41 @@ function FirstPost() {
                 <main className={classes.containerWrap}>
                     <div className={clsx(classes.featureMore)}>
                         <FirstPostHeaderDetail />
+                        {/* ------- */}
+                        <TusUploady
+                            destination={{ url: "https://my-tus-server/upload" }}
+                            chunkSize={2142880}
+                            sendDataOnCreate>
+                            <UploadButton/>
+                        </TusUploady>
+                        <p> Você e o solicitante devem combinar o retorno do item.1 </p>
+                        <Uploady
+                            destination={{ url: "https://my-server/upload" }}>
+                            <UploadButton/>
+                        </Uploady>
+                        <p> Você e o solicitante devem combinar o retorno do item.1 </p>
+                        <Uploady
+                        destination={{ url: "https://my-server/upload" }}>
+                            <LogProgress/>   
+                            <UploadButton/>
+                        </Uploady>
+                        <p> Você e o solicitante devem combinar o retorno do item.1 </p>
+                        <TusUploady
+                            destination={{ url: "https://my-tus-server/upload" }}
+                            chunkSize={2142880}
+                            sendDataOnCreate>
+                            <UploadButton/>
+                        </TusUploady>
+                        <p> Você e o solicitante devem combinar o retorno do item.1 </p>
+                        <TusUploady
+                            destination={{ url: "https://my-tus-server/upload" }}
+                            chunkSize={2142880}
+                            sendDataOnCreate>
+                            <UploadButton/>
+                        </TusUploady>
+
+                        
+                        {/* ------- */}
                         <Grid container spacing={6} className={classes.backgroundd}>
                             <Grid md={6} >
                                 <FirstPostLeftGrid />
@@ -111,7 +188,7 @@ class FirstPostLeftGrid extends React.Component {
               p {
                 color: blue;
               }
-              textarea {
+              textarea {78
                 width: 600px;
                 height: 150px;
               }
@@ -206,7 +283,6 @@ class FirstPostRightGrid extends React.Component {
                 </Grid>
                 <p> Você e o solicitante devem combinar o retorno do item. </p>
                 </Container>
-
                 <style jsx>{`
               .container {
                 margin-bottom: 50px;
