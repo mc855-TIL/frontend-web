@@ -37,6 +37,7 @@ import axios from 'axios';
 import inputimage from '~/public/images/inputimage.png';
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react'
 
+
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
     mainWrap: {
@@ -112,8 +113,8 @@ class FirstPostLeftGrid extends React.Component {
                         </textarea>
                     </form>
                     <p>Atenção: Não adicione seus dados de contato à descrição pública do
-anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
-de usuário aqui.</p>
+                        anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
+                        de usuário aqui.</p>
                 </Container>
                 <style jsx>{`
               .container {
