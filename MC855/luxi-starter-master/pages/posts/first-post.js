@@ -111,13 +111,16 @@ class FirstPostLeftGrid extends React.Component {
                         <textarea>
                         </textarea>
                     </form>
+                    <p>Atenção: Não adicione seus dados de contato à descrição pública do
+anúncio. Ao invés disso, adicione uma forma de contato ao seu perfil
+de usuário aqui.</p>
                 </Container>
                 <style jsx>{`
               .container {
                 margin: 50px;
               }
               p {
-                color: blue;
+                color: gray;
               }
               textarea {
                 width: 600px;
@@ -210,7 +213,7 @@ class FirstPostRightGrid extends React.Component {
                         <label htmlFor="acceptTerms" className="form-check-label">Disponível para empréstimo</label>
                     </Grid>
                 </Grid>
-                <p> Você e o solicitante devem combinar o retorno do item. </p>
+                <p> Você e o solicitante devem combinar o retorno do item.</p>
                 </Container>
                 <style jsx>{`
               .container {
