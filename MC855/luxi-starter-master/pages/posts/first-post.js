@@ -27,13 +27,13 @@ import insumosMateriais from '~/public/images/insumosMateriais.png';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
-import {Component} from 'react';
+import { Component } from 'react';
 import ImageUploading from 'react-images-uploading';
 import Uploady, { useItemProgressListener } from "@rpldy/uploady";
 import UploadButton from "@rpldy/upload-button";
 import { asUploadButton } from "@rpldy/upload-button";
 import TusUploady from "@rpldy/tus-uploady";
-import axios from 'axios'; 
+import axios from 'axios';
 import inputimage from '~/public/images/inputimage.png';
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react'
 
@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(10)
     },
 }));
-  
+
 function FirstPost() {
     const classes = useStyles();
     return (
@@ -145,76 +145,76 @@ class FirstPostRightGrid extends React.Component {
                 </Container>
 
                 <Container maxWidth="md">
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item md={6} xs={12}>
-                        <TextField
-                            id="standard-email"
-                            label="Quantidade (opcional)"
-                            className={"classes.textField"}
-                            fullWidth
-                            margin="normal"
-                        />
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={6} xs={12}>
+                            <TextField
+                                id="standard-email"
+                                label="Quantidade (opcional)"
+                                className={"classes.textField"}
+                                fullWidth
+                                margin="normal"
+                            />
+                        </Grid>
+                        <Grid item md={6} xs={12}>
+                            <TextField
+                                id="standard-email"
+                                label="Data de validade (opcional)"
+                                className={"classes.textField"}
+                                fullWidth
+                                margin="normal"
+                            />
+                        </Grid>
                     </Grid>
-                    <Grid item md={6} xs={12}>
-                        <TextField
-                            id="standard-email"
-                            label="Data de validade (opcional)"
-                            className={"classes.textField"}
-                            fullWidth
-                            margin="normal"
-                        />
-                    </Grid>
-                </Grid>
                 </Container>
 
-                <br/>
+                <br />
                 <Container maxWidth="md">
-                <label htmlFor="acceptTerms" className="form-check-label">Tipo de item</label>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item md={5} xs={12}>
-                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
-                        <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                    <label htmlFor="acceptTerms" className="form-check-label">Tipo de item</label>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={5} xs={12}>
+                            <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                            <label htmlFor="acceptTerms" className="form-check-label">Insumo</label>
+                        </Grid>
+                        <Grid item md={6} xs={12}>
+                            <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                            <label htmlFor="acceptTerms" className="form-check-label">Livro</label>
+                        </Grid>
                     </Grid>
-                    <Grid item md={6} xs={12}>
-                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
-                        <label htmlFor="acceptTerms" className="form-check-label">Livro</label>
-                    </Grid>
-                </Grid>
                 </Container>
 
-                <br/>
+                <br />
                 <Container maxWidth="md">
-                <label htmlFor="acceptTerms" className="form-check-label">Área do cohecimento</label>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item md={3} xs={12}>
-                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
-                        <label htmlFor="acceptTerms" className="form-check-label">Biológicas</label>
+                    <label htmlFor="acceptTerms" className="form-check-label">Área do cohecimento</label>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={3} xs={12}>
+                            <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                            <label htmlFor="acceptTerms" className="form-check-label">Biológicas</label>
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                            <label htmlFor="acceptTerms" className="form-check-label">Exatas</label>
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                            <label htmlFor="acceptTerms" className="form-check-label">Humanas</label>
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                            <label htmlFor="acceptTerms" className="form-check-label">Tecnológicas</label>
+                        </Grid>
                     </Grid>
-                    <Grid item md={3} xs={12}>
-                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
-                        <label htmlFor="acceptTerms" className="form-check-label">Exatas</label>
-                    </Grid>
-                    <Grid item md={3} xs={12}>
-                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
-                        <label htmlFor="acceptTerms" className="form-check-label">Humanas</label>
-                    </Grid>
-                    <Grid item md={3} xs={12}>
-                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
-                        <label htmlFor="acceptTerms" className="form-check-label">Tecnológicas</label>
-                    </Grid>
-                </Grid>
                 </Container>
-                
-                <br/>
+
+                <br />
                 <Container maxWidth="md">
-                <label htmlFor="acceptTerms" className="form-check-label">Condição da oferta</label>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item md={5} xs={12}>
-                        <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
-                        <label htmlFor="acceptTerms" className="form-check-label">Disponível para empréstimo</label>
+                    <label htmlFor="acceptTerms" className="form-check-label">Condição da oferta</label>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={5} xs={12}>
+                            <input name="acceptTerms" type="checkbox" id="acceptTerms" className={`form-check-input`} />
+                            <label htmlFor="acceptTerms" className="form-check-label">Disponível para empréstimo</label>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <p> Você e o solicitante devem combinar o retorno do item.</p>
+                    <p> Você e o solicitante devem combinar o retorno do item.</p>
                 </Container>
                 <style jsx>{`
               .container {
@@ -261,59 +261,59 @@ class FirstPostHeaderDetail extends React.Component {
     }
 }
 
-class App extends Component { 
+class App extends Component {
 
-    state = { 
-        
-    selectedFile: null
-    }; 
-    
-    onFileChange = event => { 
-    this.setState({ selectedFile: event.target.files[0] }); 
-    }; 
-    
-    onFileUpload = () => { 
-    const formData = new FormData(); 
-    formData.append( 
-        "myFile", 
-        this.state.selectedFile, 
-        this.state.selectedFile.name 
-    ); 
-    console.log(this.state.selectedFile); 
-    axios.post("api/uploadfile", formData); 
-    }; 
-    
-    fileData = () => { 
-    if (this.state.selectedFile) {
-        return ( 
-        <div> 
-            <p>Nome: {this.state.selectedFile.name}</p> 
-            <p>Tipo: {this.state.selectedFile.type}</p> 
-            <p> 
-            Última modificação:{" "} 
-            {this.state.selectedFile.lastModifiedDate.toDateString()} 
-            </p> 
-        </div> 
-        ); 
-    } else { 
-        return ( 
-        <div> 
-            <br /> 
-            <img src={inputimage} alt="logo" />
-        </div> 
-        ); 
-    } 
-    }; 
-    
-    render() { 
-    
-    return ( 
-        <div>
-            <div> 
-                <input type="file" onChange={this.onFileChange} /> 
-            </div> 
-        {this.fileData()} 
-        </div> 
-    ); 
-    } 
-} 
+    state = {
+
+        selectedFile: null
+    };
+
+    onFileChange = event => {
+        this.setState({ selectedFile: event.target.files[0] });
+    };
+
+    onFileUpload = () => {
+        const formData = new FormData();
+        formData.append(
+            "myFile",
+            this.state.selectedFile,
+            this.state.selectedFile.name
+        );
+        console.log(this.state.selectedFile);
+        axios.post("api/uploadfile", formData);
+    };
+
+    fileData = () => {
+        if (this.state.selectedFile) {
+            return (
+                <div>
+                    <p>Nome: {this.state.selectedFile.name}</p>
+                    <p>Tipo: {this.state.selectedFile.type}</p>
+                    <p>
+                        Última modificação:{" "}
+                        {this.state.selectedFile.lastModifiedDate.toDateString()}
+                    </p>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <br />
+                    <img src={inputimage} alt="logo" />
+                </div>
+            );
+        }
+    };
+
+    render() {
+
+        return (
+            <div>
+                <div>
+                    <input type="file" onChange={this.onFileChange} />
+                </div>
+                {this.fileData()}
+            </div>
+        );
+    }
+}

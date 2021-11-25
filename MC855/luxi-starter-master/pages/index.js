@@ -46,7 +46,7 @@ function Landing(props) {
     <React.Fragment>
       <Head >
         <title>
-          { brand.starter.name }
+          {brand.starter.name}
           &nbsp; - Home Page
         </title>
       </Head>
@@ -59,15 +59,15 @@ function Landing(props) {
             <Subscribe />
           </section>
           <section className={clsx(classes.spaceTop, classes.spaceBottom)} id="feature">
-              <Feature />
+            <Feature />
           </section>
         </main>
         <Hidden mdDown>
           <PageNav />
         </Hidden>
         <section className={classes.pageSection}>
-            <Counter />
-          </section>
+          <Counter />
+        </section>
         <Footer toggleDir={onToggleDir} />
       </div>
       <h1 className="title">
