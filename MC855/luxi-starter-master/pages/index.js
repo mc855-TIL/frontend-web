@@ -76,6 +76,12 @@ function Landing(props) {
           <a>Adicionar produto</a>
         </Link>
       </h1>
+      <h1 className="title">
+        Ver{' '}
+        <Link href="/posts/productDetail">
+          <a>Detalhes produto</a>
+        </Link>
+      </h1>
     </React.Fragment>
   );
 }
