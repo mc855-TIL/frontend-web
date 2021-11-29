@@ -41,6 +41,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import unicamp from '~/public/images/unicamp.png';
+import Button from '@material-ui/core/Button';
 
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
@@ -188,14 +189,35 @@ class ProductDetailLeftGrid extends React.Component {
                                 </Grid>
                                 <Grid item md={6} >
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        PARA QUEM?
+                                        Katia Osório
                                     </Typography>
                                     <Typography>
-                                        O serviço é destinado à comunidade acadêmico-científica das instituições de ensino superior do Brasil, credenciadas na Comunidade Acadêmica Federada (CAFe).
+                                        UNICAMP
                                     </Typography>
+
+                                    <Grid container spacing={3} className={"classes.backgroundd"}>
+                                        <Grid item md={6}>
+                                            <h3>
+                                                E-mail
+                                            </h3>
+                                            <h5>
+                                                k134529@dac.unicamp.br
+                                            </h5>
+                                        </Grid>
+                                        <Grid item md={6} >
+                                            <h3>
+                                                Telefone
+                                            </h3>
+                                            <h5>
+                                            +55 19 98104-1895
+                                            </h5>
+                                        </Grid>
+                                        <Button variant="contained" href="#">Ver todos</Button>
+                                    </Grid>
+
+
                                 </Grid>
                             </Grid>
-
                         </CardContent>
                     </Card>
                 </Grid>
