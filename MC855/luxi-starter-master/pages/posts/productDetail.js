@@ -35,8 +35,14 @@ import { asUploadButton } from "@rpldy/upload-button";
 import TusUploady from "@rpldy/tus-uploady";
 import axios from 'axios';
 import inputimage from '~/public/images/inputimage.png';
+import CardMedia from '@material-ui/core/CardMedia';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import paraQuem from '~/public/images/paraQuem.png';
+import unicamp from '~/public/images/unicamp.png';
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react'
-
+import Button from '@mui/material/Button';
 
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
@@ -92,6 +98,7 @@ function ProductDetail() {
 export default ProductDetail;
 
 class ProductDetailLeftGrid extends React.Component {
+
     render() {
         return (
             <div className="container">
@@ -122,63 +129,76 @@ class ProductDetailLeftGrid extends React.Component {
               }
             `}</style>
 
-            <Container maxWidth="md">
-                <h2>
-                    Características
-                </h2>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item md={3} xs={12}>
-                        <h4>Tipo de item</h4>
+                <Container maxWidth="md">
+                    <h2>
+                        Características
+                    </h2>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={3} xs={12}>
+                            <h4>Tipo de item</h4>
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            <h6>.......</h6>
+                        </Grid>
                     </Grid>
-                    <Grid item md={3} xs={12}>
-                    <h6>.......</h6>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={3} xs={12}>
+                            <h4>Quantidade</h4>
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            <h6>.......</h6>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item md={3} xs={12}>
-                        <h4>Quantidade</h4>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={3} xs={12}>
+                            <h4>Atualizado em</h4>
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            <h6>.......</h6>
+                        </Grid>
                     </Grid>
-                    <Grid item md={3} xs={12}>
-                    <h6>.......</h6>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={3} xs={12}>
+                            <h4>Data de validade</h4>
+                        </Grid>
+                        <Grid item md={3} xs={12}>
+                            <h6>.......</h6>
+                        </Grid>
                     </Grid>
-                </Grid>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item md={3} xs={12}>
-                    <h4>Atualizado em</h4>
+                </Container>
+                <Container maxWidth="md">
+                    <h2>
+                        Descrição
+                    </h2>
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item xs={12}>
+                            <text htmlFor="acceptTerms" className="form-check-label">Kits Elisa para detecção de IL-17, IL10, MMP9, TIMP1, RANKL, OPG, IL-12 para humanos.</text>
+                        </Grid>
                     </Grid>
-                    <Grid item md={3} xs={12}>
-                    <h6>.......</h6>
+                </Container>
+                <Container maxWidth="md">
+                    <h2>
+                        Contato
+                    </h2>
+
+                    <Grid item key={"123"} xs={12} sm={6} md={4}>
+                        <Card className={"card"}>
+                            <Container maxWidth="md">
+                                <img src={unicamp} alt="logo" />
+                            </Container>
+                            <CardContent className={"cardContent"}>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    PARA QUEM?
+                                </Typography>
+                                <Typography>
+                                    O serviço é destinado à comunidade acadêmico-científica das instituições de ensino superior do Brasil, credenciadas na Comunidade Acadêmica Federada (CAFe).
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </Grid>
-                </Grid>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item md={3} xs={12}>
-                        <h4>Data de validade</h4>
-                    </Grid>
-                    <Grid item md={3} xs={12}>
-                        <h6>.......</h6>
-                    </Grid>
-                </Grid>
-            </Container>
-            <Container maxWidth="md">
-                <h2>
-                    Descrição
-                </h2>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item xs={12}>
-                        <text htmlFor="acceptTerms" className="form-check-label">Kits Elisa para detecção de IL-17, IL10, MMP9, TIMP1, RANKL, OPG, IL-12 para humanos.</text>
-                    </Grid>
-                </Grid>
-            </Container>
-            <Container maxWidth="md">
-                <h2>
-                    Contato
-                </h2>
-                <Grid container spacing={3} alignItems="flex-end">
-                    <Grid item xs={12}>
-                        <text htmlFor="acceptTerms" className="form-check-label">Kits Elisa para detecção de IL-17, IL10, MMP9, TIMP1, RANKL, OPG, IL-12 para humanos.</text>
-                    </Grid>
-                </Grid>
-            </Container>
+
+                
+                </Container>
             </div>
 
 
