@@ -10,7 +10,7 @@ import useStyles from './subscribe-style';
 export default function Pricing() {
   const classes = useStyles();
   const [values, setValues] = useState({
-    email: '', name: '', type: '', area: '', university: '',
+    email: '',
   });
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
@@ -31,8 +31,8 @@ export default function Pricing() {
                 label="O que você procura?"
                 className={classes.textField}
                 fullWidth
-                value={values.name}
-                onChange={handleChange('name')}
+                value={values.email}
+                onChange={handleChange('email')}
                 margin="normal"
               />
             </Grid>
@@ -44,8 +44,8 @@ export default function Pricing() {
                 label="Universidade"
                 className={classes.textField}
                 fullWidth
-                value={values.university}
-                onChange={handleChange('university')}
+                value={values.email}
+                onChange={handleChange('email')}
                 margin="normal"
               />
             </Grid>
@@ -55,8 +55,8 @@ export default function Pricing() {
                 label="Área"
                 className={classes.textField}
                 fullWidth
-                value={values.area}
-                onChange={handleChange('area')}
+                value={values.email}
+                onChange={handleChange('email')}
                 margin="normal"
               />
             </Grid>
@@ -66,8 +66,8 @@ export default function Pricing() {
                 label="Tipo de item"
                 className={classes.textField}
                 fullWidth
-                value={values.type}
-                onChange={handleChange('type')}
+                value={values.email}
+                onChange={handleChange('email')}
                 margin="normal"
               />
             </Grid>
