@@ -36,7 +36,7 @@ import TusUploady from "@rpldy/tus-uploady";
 import axios from 'axios';
 import inputimage from '~/public/images/inputimage.png';
 import { TouchableOpacity, View, Image, Text, StyleSheet } from 'react'
-
+import Button from '@material-ui/core/Button';
 
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function FirstPost() {
+function AddProduct() {
     const classes = useStyles();
     return (
         <React.Fragment>
@@ -73,13 +73,13 @@ function FirstPost() {
                 <Header />
                 <main className={classes.containerWrap}>
                     <div className={clsx(classes.featureMore)}>
-                        <FirstPostHeaderDetail />
+                        <AddProductHeaderDetail />
                         <Grid container spacing={6} className={classes.backgroundd}>
                             <Grid md={6} >
-                                <FirstPostLeftGrid />
+                                <AddProductLeftGrid />
                             </Grid>
                             <Grid md={6} >
-                                <FirstPostRightGrid />
+                                <AddProductRightGrid />
                             </Grid>
                         </Grid>
                     </div>
@@ -89,9 +89,9 @@ function FirstPost() {
     )
 }
 
-export default FirstPost;
+export default AddProduct;
 
-class FirstPostLeftGrid extends React.Component {
+class AddProductLeftGrid extends React.Component {
     render() {
         return (
             <div className="container">
@@ -133,7 +133,7 @@ class FirstPostLeftGrid extends React.Component {
     }
 }
 
-class FirstPostRightGrid extends React.Component {
+class AddProductRightGrid extends React.Component {
     render() {
         return (
             <div className="container">
@@ -216,6 +216,17 @@ class FirstPostRightGrid extends React.Component {
                     </Grid>
                     <p> Você e o solicitante devem combinar o retorno do item.</p>
                 </Container>
+                
+                <Container maxWidth="md">
+                    <Grid container spacing={3} alignItems="flex-end">
+                        <Grid item md={3} xs={12}>
+                            <Button variant="contained" href="#">Cancelar</Button>
+                        </Grid>
+                        <Grid item md={5} xs={12}>
+                            <Button variant="contained" color="primary" href="#">Salvar e anunciar</Button>
+                        </Grid>
+                    </Grid>
+                </Container>
                 <style jsx>{`
               .container {
                 margin-bottom: 50px;
@@ -236,7 +247,7 @@ class FirstPostRightGrid extends React.Component {
     }
 }
 
-class FirstPostHeaderDetail extends React.Component {
+class AddProductHeaderDetail extends React.Component {
     render() {
         return (
             <div className="container">
