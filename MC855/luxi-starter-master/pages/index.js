@@ -72,7 +72,7 @@ function Landing(props) {
       </div>
       <h1 className="title">
         Ver{' '}
-        <Link href="/posts/first-post">
+        <Link href="/posts/addProduct">
           <a>Adicionar produto</a>
         </Link>
       </h1>

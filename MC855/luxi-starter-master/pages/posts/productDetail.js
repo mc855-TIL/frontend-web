@@ -41,7 +41,11 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import unicamp from '~/public/images/unicamp.png';
+import defaultImage from '~/public/images/defaultImage.jpg';
 import Button from '@material-ui/core/Button';
+import { Box } from '@material-ui/core'
+import styled from 'styled-components'
+import { useTable } from 'react-table'
 
 const sectionMargin = margin => (margin * 15);
 const useStyles = makeStyles(theme => ({
@@ -132,38 +136,7 @@ class ProductDetailLeftGrid extends React.Component {
                     <h2>
                         Características
                     </h2>
-                    <Grid container spacing={3} alignItems="flex-end">
-                        <Grid item md={3} xs={12}>
-                            <h4>Tipo de item</h4>
-                        </Grid>
-                        <Grid item md={3} xs={12}>
-                            <h6>.......</h6>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={3} alignItems="flex-end">
-                        <Grid item md={3} xs={12}>
-                            <h4>Quantidade</h4>
-                        </Grid>
-                        <Grid item md={3} xs={12}>
-                            <h6>.......</h6>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={3} alignItems="flex-end">
-                        <Grid item md={3} xs={12}>
-                            <h4>Atualizado em</h4>
-                        </Grid>
-                        <Grid item md={3} xs={12}>
-                            <h6>.......</h6>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={3} alignItems="flex-end">
-                        <Grid item md={3} xs={12}>
-                            <h4>Data de validade</h4>
-                        </Grid>
-                        <Grid item md={3} xs={12}>
-                            <h6>.......</h6>
-                        </Grid>
-                    </Grid>
+                    <App/>
                 </Container>
                 <Container maxWidth="md">
                     <h2>
@@ -209,7 +182,7 @@ class ProductDetailLeftGrid extends React.Component {
                                                 Telefone
                                             </h3>
                                             <h5>
-                                            +55 19 98104-1895
+                                                +55 19 98104-1895
                                             </h5>
                                         </Grid>
                                         <Button variant="contained" href="#">Ver todos</Button>
@@ -232,9 +205,35 @@ class ProductDetailRightGrid extends React.Component {
     render() {
         return (
             <div className="container">
-                <Container maxWidth="md">
-                    <img src={inputimage} alt="logo" />
-                </Container>
+                
+                    <Card className={"classes.card"} >
+                        <Box
+                            display="flex"
+                            width="max" height={300}
+                        >
+                            <Box m="auto">
+                            <img src={defaultImage} alt="logo" />
+                            </Box>
+                        </Box>
+                        <Box
+                            display="flex"
+                            width="max" height={60}
+                        >
+                            <Box m="auto">
+                            <Button variant="contained" color="primary" href="#">Preciso deste item</Button>
+                            </Box>
+                        </Box>
+                        <Box
+                            display="flex"
+                            width="max" height={60}
+                        >
+                            <Box m="auto">
+                            <Button variant="contained" href="#">Denunciar anuncio</Button>
+                            </Box>
+                        </Box>
+                    </Card>
+                
+
                 <style jsx>{`
               .container {
                 margin-bottom: 50px;
@@ -242,6 +241,7 @@ class ProductDetailRightGrid extends React.Component {
                 margin-right: 50px;
                 margin-top: 50px;
               }
+              
               p {
                 color: gray;
               }
@@ -279,3 +279,92 @@ class ProductDetailHeaderDetail extends React.Component {
         );
     }
 }
+
+function App() {
+    const data = React.useMemo(
+      () => [
+        {
+          col1: 'Hello',
+          col2: 'World',
+        },
+        {
+          col1: 'react-table',
+          col2: 'rocks',
+        },
+        {
+          col1: 'whatever',
+          col2: 'you want',
+        },
+      ],
+      []
+    )
+  
+    const columns = React.useMemo(
+      () => [
+        {
+          Header: 'Column 1',
+          accessor: 'col1', // accessor is the "key" in the data
+        },
+        {
+          Header: 'Column 2',
+          accessor: 'col2',
+        },
+      ],
+      []
+    )
+  
+    const {
+      getTableProps,
+      getTableBodyProps,
+      headerGroups,
+      rows,
+      prepareRow,
+    } = useTable({ columns, data })
+  
+    return (
+      <table {...getTableProps()} style={{ border: 'solid 1px blue' }}>
+        <thead>
+          {headerGroups.map(headerGroup => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th
+                  {...column.getHeaderProps()}
+                  style={{
+                    borderBottom: 'solid 3px red',
+                    background: 'aliceblue',
+                    color: 'black',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {column.render('Header')}
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {rows.map(row => {
+            prepareRow(row)
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map(cell => {
+                  return (
+                    <td
+                      {...cell.getCellProps()}
+                      style={{
+                        padding: '10px',
+                        border: 'solid 1px gray',
+                        background: 'papayawhip',
+                      }}
+                    >
+                      {cell.render('Cell')}
+                    </td>
+                  )
+                })}
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    )
+  }
