@@ -77,7 +77,7 @@ export default function Pricing() {
         <pre class="tab"></pre>
         <center>
         <Grid item md={9} xs={12} class="tab">
-          <Button variant="contained" color="primary" className={classes.button}>
+          <Button variant="contained" color="secondary" className={classes.button}>
             Procurar insumos
           </Button>
         </Grid>

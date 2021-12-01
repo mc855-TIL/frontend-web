@@ -53,7 +53,7 @@ function PageNav(props) {
         }}
       >
         <Fab
-          color="primary"
+          color="secondary"
           aria-label="To top"
           component={LinkBtn}
           href="#home"

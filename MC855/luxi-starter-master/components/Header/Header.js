@@ -88,7 +88,7 @@ function Header(props) {
             <img src={logoSolidariedade} alt="logo" />
             </nav>
             <nav className={classes.userMenu}>
-              <Button variant="contained" color="primary" href="#">Acessar</Button>
+              <Button variant="contained" color="secondary" href="#">Acessar</Button>
             </nav>
           </div>
         </Container>

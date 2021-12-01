@@ -223,7 +223,7 @@ class AddProductRightGrid extends React.Component {
                             <Button variant="contained" href="#">Cancelar</Button>
                         </Grid>
                         <Grid item md={5} xs={12}>
-                            <Button variant="contained" color="primary" href="#">Salvar e anunciar</Button>
+                            <Button variant="contained" color="secondary" href="#">Salvar e anunciar</Button>
                         </Grid>
                     </Grid>
                 </Container>

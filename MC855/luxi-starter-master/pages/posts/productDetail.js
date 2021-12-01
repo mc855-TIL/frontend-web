@@ -218,7 +218,7 @@ class ProductDetailRightGrid extends React.Component {
             width="max" height={60}
           >
             <Box m="auto">
-              <Button variant="contained" color="primary" href="#">Preciso deste item</Button>
+              <Button variant="contained" color="secondary" href="#">Preciso deste item</Button>
             </Box>
           </Box>
           <Box
