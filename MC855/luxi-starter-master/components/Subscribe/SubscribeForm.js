@@ -82,8 +82,10 @@ export default function Pricing() {
           </Button>
         </Grid>
 
-        <pre class="tab"></pre>
-        <Typography align="center" variant="h10">Compartilhe um item</Typography>
+        <p/>
+        <Button variant="contained" color="secondary" className={classes.button}>
+            Compartilhe um item
+          </Button>
         </center>
       </Paper>
   );

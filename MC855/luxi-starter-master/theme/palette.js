@@ -2,8 +2,8 @@ module.exports = {
   burgundy: {
     palette: {
       primary: {
-        light: '#bbdefb',
-        main: '#CCFFE5',
+        light: '#08979C',
+        main: '#08979C',
       },
       secondary: {
         light: '#bbdefb',
