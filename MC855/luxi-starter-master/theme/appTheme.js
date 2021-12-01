@@ -4,6 +4,7 @@ const appTheme = (color, mode) => ({
     type: mode,
     primary: palette[color].palette.primary,
     secondary: palette[color].palette.secondary,
+    terciary: palette[color].palette.terciary,
     action: {
       hover: mode === 'dark' ? 'rgba(128,128,128, 0.9)' : 'rgba(128,128,128, 0.05)',
       hoverOpacity: 0.05
