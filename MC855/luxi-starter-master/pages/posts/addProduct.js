@@ -266,6 +266,9 @@ class AddProductHeaderDetail extends React.Component {
             p {
               color: gray;
             }
+            a {
+              text-decoration:none;
+            }
           `}</style>
             </div>
         );

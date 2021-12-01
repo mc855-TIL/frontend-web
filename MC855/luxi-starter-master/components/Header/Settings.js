@@ -135,7 +135,7 @@ function Settings(props) {
               <ListItemText primary={props.t('common:' + val)} />
               {i18n.language === val && (
                 <ListItemSecondaryAction>
-                  <CheckIcon color="primary" />
+                  <CheckIcon color="secondary" />
                 </ListItemSecondaryAction>
               )}
             </ListItem>

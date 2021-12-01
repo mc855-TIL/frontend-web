@@ -132,7 +132,7 @@ function Contact(props) {
             <div className={classes.btnArea}>
               <FormControlLabel
                 control={
-                  <Checkbox checked={check} onChange={(e) => handleCheck(e)} color="primary" value="check" />
+                  <Checkbox checked={check} onChange={(e) => handleCheck(e)} color="secondary" value="check" />
                 }
                 label={(
                   <span>

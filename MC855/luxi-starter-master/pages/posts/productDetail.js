@@ -260,7 +260,7 @@ class ProductDetailHeaderDetail extends React.Component {
         <br />
         <p>Início / Catálogo / Detalhes da oferta</p>
         <h1 className="title">
-          <Link href="/">
+          <Link href="/" style="text-decoration:none">
             <a>←</a>
           </Link>
           {' '}Detalhes da oferta
@@ -271,6 +271,9 @@ class ProductDetailHeaderDetail extends React.Component {
             }
             p {
               color: gray;
+            }
+            a {
+              text-decoration:none;
             }
           `}</style>
       </div>
